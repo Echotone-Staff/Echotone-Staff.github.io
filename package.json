@@ -1,37 +1,43 @@
 {
   "name": "example-basic",
   "dependencies": {
-    "@ark-ui/solid": "^4.5.1",
+    "@ark-ui/solid": "^4.8.0",
     "@solid-primitives/intersection-observer": "^2.1.6",
     "@solidjs/meta": "^0.29.4",
-    "@solidjs/router": "^0.15.0",
-    "@solidjs/start": "^1.0.10",
+    "@solidjs/router": "^0.15.2",
+    "@solidjs/start": "^1.0.11",
     "@unpic/placeholder": "^0.1.2",
     "@unpic/solid": "^0.0.49",
     "hyphen": "^1.10.6",
-    "hyphenopoly": "^6.0.0",
-    "solid-js": "^1.9.2",
+    "lucide-solid": "^0.468.0",
+    "solid-icons": "^1.1.0",
+    "solid-js": "^1.9.4",
     "solid-lorem": "^0.0.1",
     "solid-mason": "^0.1.7",
-    "tailwindcss": "^3.4.14",
     "vinxi": "^0.4.3"
   },
   "engines": {
     "node": ">=18"
   },
   "scripts": {
-    "dev": "vinxi dev",
+    "dev": "COMPATIBILITY_DATE=2024-11-30 vinxi dev",
     "build": "vinxi build",
     "start": "vinxi start",
-    "version": "vinxi version"
+    "version": "vinxi version",
+    "codegen": "graphql-code-generator --config graphql.config.yml"
   },
   "trustedDependencies": [
     "@parcel/watcher"
   ],
   "type": "module",
   "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.4",
+    "@graphql-codegen/client-preset": "^4.6.1",
+    "@graphql-codegen/typescript": "^4.1.3",
     "@types/hyphen": "^1.6.7",
     "autoprefixer": "^10.4.20",
-    "sass": "^1.80.6"
+    "graphql-config": "^5.1.3",
+    "sass": "^1.83.1",
+    "scss-reset": "^1.4.6"
   }
 }

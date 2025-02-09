@@ -10,4 +10,13 @@ export default defineConfig({
             serverDir: "",
         },
     },
+    vite: {
+        css: {
+            preprocessorOptions: {
+              scss: {
+                api: 'modern-compiler' // or "modern"
+              }
+            }
+        }
+    }
 });

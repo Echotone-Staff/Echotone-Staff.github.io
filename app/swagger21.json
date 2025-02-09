@@ -1,0 +1,3072 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Squidex API",
+    "description": "# Introduction\n\nThe API provides two specifications. The Content API usually returns one object per schema field where the keys are the languages (or `iv` for non-localized) fields and the values are the actual field values.\n\nYou can use the `X-Flatten` header to return a flat structure when you query content items. This is more performant and easier for code generation. Unfortunantely it cannot be modelled with OpenAPI. Therefore we provide two different documents for your API.\n\nRead more about this here: https://docs.squidex.io/02-documentation/concepts/localization#how-to-use-the-api\n\n## Normal Content API\n\nAll content fields are objects in the response.\n\nGo to: https://laab.ddns.net:38080/api/content/echotone/docs/\n\n## Flat Content API\n\nAll content fields are single values.\n\nGo to: https://laab.ddns.net:38080/api/content/echotone/docs/flat/",
+    "version": "7.17.0.0",
+    "x-logo": {
+      "url": "https://laab.ddns.net:38080/images/logo-white.png",
+      "backgroundStyle": "",
+      "backgroundColor": "#3f83df"
+    }
+  },
+  "host": "laab.ddns.net:38080",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/content/echotone/about/": {
+      "get": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Query 'À propos' contents items.",
+        "description": "How to make queries?\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html\n\nThe query endpoints support three options:\n\n### Query with OData\n\nSquidex supports a subset of the OData (https://www.odata.org/) syntax with with the following query options:\n\n* **$top**: The $top query option requests the number of items in the queried collection to be included in the result. The default value is 20 and the maximum allowed value is 200. You can change the maximum in the app settings, when you host Squidex yourself.\n* **$skip**: The $skip query option requests the number of items in the queried collection that are to be skipped and not included in the result. Use it together with $top to read the all your data page by page. \n* **$search**: The $search query option allows clients to request entities matching a free-text search expression. We add the data of all fields for all languages to our full text engine.\n* **$filter**: The $filter query option allows clients to filter a collection of resources that are addressed by a request URL.\n* **$orderby**: The $orderby query option allows clients to request resources in a particular order.\n\n### Query with JSON query\n\nSquidex also supports a query syntax based on JSON. You have to pass in the query object as query parameter:\n\n* **q**: A json text that represents the same query options as with OData, but is more performant to parse.\n\n### Query by IDs\n\nQuery your items by passing in one or many IDs with the following query parameter:\n\n* **ids**: A comma-separated list of ids. If you define this option all other settings are ignored.",
+        "operationId": "QueryAboutContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "$search",
+            "description": "Optional number of items to skip.",
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "query",
+            "name": "$top",
+            "description": "Optional number of items to take.",
+            "type": "number",
+            "x-position": 1
+          },
+          {
+            "in": "query",
+            "name": "$skip",
+            "description": "Optional number of items to skip.",
+            "type": "number",
+            "x-position": 2
+          },
+          {
+            "in": "query",
+            "name": "$orderby",
+            "description": "Optional OData order definition.",
+            "type": "string",
+            "x-position": 3
+          },
+          {
+            "in": "query",
+            "name": "$filter",
+            "description": "Optional OData filter.",
+            "type": "string",
+            "x-position": 4
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "description": "JSON query as well formatted json string. Overrides all other query parameters, except 'ids'.",
+            "type": "string",
+            "x-position": 5
+          },
+          {
+            "in": "query",
+            "name": "ids",
+            "description": "Comma separated list of object IDs. Overrides all other query parameters.",
+            "type": "string",
+            "x-position": 6
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Content items retrieved.",
+            "schema": {
+              "$ref": "#/definitions/AboutContentResultDto"
+            }
+          },
+          "400": {
+            "description": "Content query not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.read.own"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Create a 'À propos' content item.",
+        "operationId": "CreateAboutContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "publish",
+            "description": "Set to true to autopublish content on create.",
+            "type": "boolean",
+            "x-position": 0
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The optional custom content ID.",
+            "type": "string",
+            "x-position": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AboutDataDto"
+            },
+            "x-name": "data",
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Content item created",
+            "schema": {
+              "$ref": "#/definitions/AboutContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.create"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/about/query": {
+      "post": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Query 'À propos' contents items using Post.",
+        "operationId": "QueryPostAboutContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/QueryDto"
+            },
+            "x-name": "query",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Content items retrieved.",
+            "schema": {
+              "$ref": "#/definitions/AboutContentResultDto"
+            }
+          },
+          "400": {
+            "description": "Content query not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/about/{id}": {
+      "get": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Get a 'À propos' content item.",
+        "operationId": "GetAboutContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "version",
+            "description": "The version of the objec.",
+            "type": "number",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item returned.",
+            "schema": {
+              "$ref": "#/definitions/AboutContentDto"
+            }
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.read.own"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Upsert a 'À propos' content item.",
+        "operationId": "UpsertAboutContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "patch",
+            "description": "Makes the update as patch.",
+            "type": "boolean",
+            "x-position": 0
+          },
+          {
+            "in": "query",
+            "name": "publish",
+            "description": "Set to true to autopublish content on create.",
+            "type": "boolean",
+            "x-position": 1
+          },
+          {
+            "in": "query",
+            "name": "enrichDefaults",
+            "description": "Enrich the content with defaults.",
+            "type": "string",
+            "x-position": 2
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 3
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AboutDataDto"
+            },
+            "x-name": "data",
+            "x-position": 4
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item created or updated.",
+            "schema": {
+              "$ref": "#/definitions/AboutContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.upsert"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Update a 'À propos' content item.",
+        "operationId": "UpdateAboutContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "enrichDefaults",
+            "description": "Enrich the content with defaults.",
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AboutDataDto"
+            },
+            "x-name": "data",
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item updated.",
+            "schema": {
+              "$ref": "#/definitions/AboutContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.update.own"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Patch a 'À propos' content item.",
+        "operationId": "PatchAboutContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AboutDataDto"
+            },
+            "x-name": "data",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item updated.",
+            "schema": {
+              "$ref": "#/definitions/AboutContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.update.own"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Delete a 'À propos' content item.",
+        "operationId": "DeleteAboutContent",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "permanent",
+            "description": "True when the entity should be deleted permanently.",
+            "type": "boolean",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "204": {
+            "description": "Content item deleted"
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.delete.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/about/{id}/{version}": {
+      "get": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Get a 'À propos' content item by id and version.",
+        "operationId": "GetVersionedAboutContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "version",
+            "description": "The version of the objec.",
+            "required": true,
+            "type": "number",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item returned.",
+            "schema": {
+              "$ref": "#/definitions/AboutDataDto"
+            }
+          }
+        },
+        "deprecated": true,
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/about/{id}/validity": {
+      "get": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Validates a 'À propos' content item.",
+        "operationId": "ValidateAboutContent",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item is valid."
+          },
+          "400": {
+            "description": "Content item is not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/about/bulk": {
+      "post": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Bulk update content items.",
+        "operationId": "BulkAboutContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BulkUpdateContentsDto"
+            },
+            "x-name": "request",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contents created, update or delete.",
+            "schema": {
+              "$ref": "#/definitions/BulkResultDto"
+            }
+          },
+          "400": {
+            "description": "Contents request not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/about/{id}/defaults": {
+      "put": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Apply a 'À propos' content item. defaults",
+        "operationId": "UpdateDefaultsAboutContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item updated.",
+            "schema": {
+              "$ref": "#/definitions/AboutContentDto"
+            }
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.update.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/about/{id}/status": {
+      "put": {
+        "tags": [
+          "About"
+        ],
+        "summary": "Change the status of a 'À propos' content item.",
+        "operationId": "ChangeAboutContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The request to change content status.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ChangeStatusDto"
+            },
+            "x-name": "request",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content status updated.",
+            "schema": {
+              "$ref": "#/definitions/AboutContentDto"
+            }
+          },
+          "400": {
+            "description": "Content status not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.about.changestatus.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/contact/": {
+      "get": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Query 'Informations pratiques' contents items.",
+        "description": "How to make queries?\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html\n\nThe query endpoints support three options:\n\n### Query with OData\n\nSquidex supports a subset of the OData (https://www.odata.org/) syntax with with the following query options:\n\n* **$top**: The $top query option requests the number of items in the queried collection to be included in the result. The default value is 20 and the maximum allowed value is 200. You can change the maximum in the app settings, when you host Squidex yourself.\n* **$skip**: The $skip query option requests the number of items in the queried collection that are to be skipped and not included in the result. Use it together with $top to read the all your data page by page. \n* **$search**: The $search query option allows clients to request entities matching a free-text search expression. We add the data of all fields for all languages to our full text engine.\n* **$filter**: The $filter query option allows clients to filter a collection of resources that are addressed by a request URL.\n* **$orderby**: The $orderby query option allows clients to request resources in a particular order.\n\n### Query with JSON query\n\nSquidex also supports a query syntax based on JSON. You have to pass in the query object as query parameter:\n\n* **q**: A json text that represents the same query options as with OData, but is more performant to parse.\n\n### Query by IDs\n\nQuery your items by passing in one or many IDs with the following query parameter:\n\n* **ids**: A comma-separated list of ids. If you define this option all other settings are ignored.",
+        "operationId": "QueryContactContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "$search",
+            "description": "Optional number of items to skip.",
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "query",
+            "name": "$top",
+            "description": "Optional number of items to take.",
+            "type": "number",
+            "x-position": 1
+          },
+          {
+            "in": "query",
+            "name": "$skip",
+            "description": "Optional number of items to skip.",
+            "type": "number",
+            "x-position": 2
+          },
+          {
+            "in": "query",
+            "name": "$orderby",
+            "description": "Optional OData order definition.",
+            "type": "string",
+            "x-position": 3
+          },
+          {
+            "in": "query",
+            "name": "$filter",
+            "description": "Optional OData filter.",
+            "type": "string",
+            "x-position": 4
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "description": "JSON query as well formatted json string. Overrides all other query parameters, except 'ids'.",
+            "type": "string",
+            "x-position": 5
+          },
+          {
+            "in": "query",
+            "name": "ids",
+            "description": "Comma separated list of object IDs. Overrides all other query parameters.",
+            "type": "string",
+            "x-position": 6
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Content items retrieved.",
+            "schema": {
+              "$ref": "#/definitions/ContactContentResultDto"
+            }
+          },
+          "400": {
+            "description": "Content query not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.read.own"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Create a 'Informations pratiques' content item.",
+        "operationId": "CreateContactContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "publish",
+            "description": "Set to true to autopublish content on create.",
+            "type": "boolean",
+            "x-position": 0
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The optional custom content ID.",
+            "type": "string",
+            "x-position": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ContactDataDto"
+            },
+            "x-name": "data",
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Content item created",
+            "schema": {
+              "$ref": "#/definitions/ContactContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.create"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/contact/query": {
+      "post": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Query 'Informations pratiques' contents items using Post.",
+        "operationId": "QueryPostContactContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/QueryDto"
+            },
+            "x-name": "query",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Content items retrieved.",
+            "schema": {
+              "$ref": "#/definitions/ContactContentResultDto"
+            }
+          },
+          "400": {
+            "description": "Content query not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/contact/{id}": {
+      "get": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Get a 'Informations pratiques' content item.",
+        "operationId": "GetContactContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "version",
+            "description": "The version of the objec.",
+            "type": "number",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item returned.",
+            "schema": {
+              "$ref": "#/definitions/ContactContentDto"
+            }
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.read.own"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Upsert a 'Informations pratiques' content item.",
+        "operationId": "UpsertContactContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "patch",
+            "description": "Makes the update as patch.",
+            "type": "boolean",
+            "x-position": 0
+          },
+          {
+            "in": "query",
+            "name": "publish",
+            "description": "Set to true to autopublish content on create.",
+            "type": "boolean",
+            "x-position": 1
+          },
+          {
+            "in": "query",
+            "name": "enrichDefaults",
+            "description": "Enrich the content with defaults.",
+            "type": "string",
+            "x-position": 2
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 3
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ContactDataDto"
+            },
+            "x-name": "data",
+            "x-position": 4
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item created or updated.",
+            "schema": {
+              "$ref": "#/definitions/ContactContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.upsert"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Update a 'Informations pratiques' content item.",
+        "operationId": "UpdateContactContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "enrichDefaults",
+            "description": "Enrich the content with defaults.",
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ContactDataDto"
+            },
+            "x-name": "data",
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item updated.",
+            "schema": {
+              "$ref": "#/definitions/ContactContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.update.own"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Patch a 'Informations pratiques' content item.",
+        "operationId": "PatchContactContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ContactDataDto"
+            },
+            "x-name": "data",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item updated.",
+            "schema": {
+              "$ref": "#/definitions/ContactContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.update.own"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Delete a 'Informations pratiques' content item.",
+        "operationId": "DeleteContactContent",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "permanent",
+            "description": "True when the entity should be deleted permanently.",
+            "type": "boolean",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "204": {
+            "description": "Content item deleted"
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.delete.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/contact/{id}/{version}": {
+      "get": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Get a 'Informations pratiques' content item by id and version.",
+        "operationId": "GetVersionedContactContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "version",
+            "description": "The version of the objec.",
+            "required": true,
+            "type": "number",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item returned.",
+            "schema": {
+              "$ref": "#/definitions/ContactDataDto"
+            }
+          }
+        },
+        "deprecated": true,
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/contact/{id}/validity": {
+      "get": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Validates a 'Informations pratiques' content item.",
+        "operationId": "ValidateContactContent",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item is valid."
+          },
+          "400": {
+            "description": "Content item is not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/contact/bulk": {
+      "post": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Bulk update content items.",
+        "operationId": "BulkContactContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BulkUpdateContentsDto"
+            },
+            "x-name": "request",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contents created, update or delete.",
+            "schema": {
+              "$ref": "#/definitions/BulkResultDto"
+            }
+          },
+          "400": {
+            "description": "Contents request not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/contact/{id}/defaults": {
+      "put": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Apply a 'Informations pratiques' content item. defaults",
+        "operationId": "UpdateDefaultsContactContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item updated.",
+            "schema": {
+              "$ref": "#/definitions/ContactContentDto"
+            }
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.update.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/contact/{id}/status": {
+      "put": {
+        "tags": [
+          "Contact"
+        ],
+        "summary": "Change the status of a 'Informations pratiques' content item.",
+        "operationId": "ChangeContactContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The request to change content status.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ChangeStatusDto"
+            },
+            "x-name": "request",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content status updated.",
+            "schema": {
+              "$ref": "#/definitions/ContactContentDto"
+            }
+          },
+          "400": {
+            "description": "Content status not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.contact.changestatus.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/page/": {
+      "get": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Query 'Page' contents items.",
+        "description": "How to make queries?\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html\n\nThe query endpoints support three options:\n\n### Query with OData\n\nSquidex supports a subset of the OData (https://www.odata.org/) syntax with with the following query options:\n\n* **$top**: The $top query option requests the number of items in the queried collection to be included in the result. The default value is 20 and the maximum allowed value is 200. You can change the maximum in the app settings, when you host Squidex yourself.\n* **$skip**: The $skip query option requests the number of items in the queried collection that are to be skipped and not included in the result. Use it together with $top to read the all your data page by page. \n* **$search**: The $search query option allows clients to request entities matching a free-text search expression. We add the data of all fields for all languages to our full text engine.\n* **$filter**: The $filter query option allows clients to filter a collection of resources that are addressed by a request URL.\n* **$orderby**: The $orderby query option allows clients to request resources in a particular order.\n\n### Query with JSON query\n\nSquidex also supports a query syntax based on JSON. You have to pass in the query object as query parameter:\n\n* **q**: A json text that represents the same query options as with OData, but is more performant to parse.\n\n### Query by IDs\n\nQuery your items by passing in one or many IDs with the following query parameter:\n\n* **ids**: A comma-separated list of ids. If you define this option all other settings are ignored.",
+        "operationId": "QueryPageContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "$search",
+            "description": "Optional number of items to skip.",
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "query",
+            "name": "$top",
+            "description": "Optional number of items to take.",
+            "type": "number",
+            "x-position": 1
+          },
+          {
+            "in": "query",
+            "name": "$skip",
+            "description": "Optional number of items to skip.",
+            "type": "number",
+            "x-position": 2
+          },
+          {
+            "in": "query",
+            "name": "$orderby",
+            "description": "Optional OData order definition.",
+            "type": "string",
+            "x-position": 3
+          },
+          {
+            "in": "query",
+            "name": "$filter",
+            "description": "Optional OData filter.",
+            "type": "string",
+            "x-position": 4
+          },
+          {
+            "in": "query",
+            "name": "q",
+            "description": "JSON query as well formatted json string. Overrides all other query parameters, except 'ids'.",
+            "type": "string",
+            "x-position": 5
+          },
+          {
+            "in": "query",
+            "name": "ids",
+            "description": "Comma separated list of object IDs. Overrides all other query parameters.",
+            "type": "string",
+            "x-position": 6
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Content items retrieved.",
+            "schema": {
+              "$ref": "#/definitions/PageContentResultDto"
+            }
+          },
+          "400": {
+            "description": "Content query not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.read.own"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Create a 'Page' content item.",
+        "operationId": "CreatePageContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "publish",
+            "description": "Set to true to autopublish content on create.",
+            "type": "boolean",
+            "x-position": 0
+          },
+          {
+            "in": "query",
+            "name": "id",
+            "description": "The optional custom content ID.",
+            "type": "string",
+            "x-position": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PageDataDto"
+            },
+            "x-name": "data",
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Content item created",
+            "schema": {
+              "$ref": "#/definitions/PageContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.create"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/page/query": {
+      "post": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Query 'Page' contents items using Post.",
+        "operationId": "QueryPostPageContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/QueryDto"
+            },
+            "x-name": "query",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Content items retrieved.",
+            "schema": {
+              "$ref": "#/definitions/PageContentResultDto"
+            }
+          },
+          "400": {
+            "description": "Content query not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/page/{id}": {
+      "get": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Get a 'Page' content item.",
+        "operationId": "GetPageContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "version",
+            "description": "The version of the objec.",
+            "type": "number",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item returned.",
+            "schema": {
+              "$ref": "#/definitions/PageContentDto"
+            }
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.read.own"
+            ]
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Upsert a 'Page' content item.",
+        "operationId": "UpsertPageContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "patch",
+            "description": "Makes the update as patch.",
+            "type": "boolean",
+            "x-position": 0
+          },
+          {
+            "in": "query",
+            "name": "publish",
+            "description": "Set to true to autopublish content on create.",
+            "type": "boolean",
+            "x-position": 1
+          },
+          {
+            "in": "query",
+            "name": "enrichDefaults",
+            "description": "Enrich the content with defaults.",
+            "type": "string",
+            "x-position": 2
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 3
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PageDataDto"
+            },
+            "x-name": "data",
+            "x-position": 4
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item created or updated.",
+            "schema": {
+              "$ref": "#/definitions/PageContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.upsert"
+            ]
+          }
+        ]
+      },
+      "put": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Update a 'Page' content item.",
+        "operationId": "UpdatePageContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "enrichDefaults",
+            "description": "Enrich the content with defaults.",
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PageDataDto"
+            },
+            "x-name": "data",
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item updated.",
+            "schema": {
+              "$ref": "#/definitions/PageContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.update.own"
+            ]
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Patch a 'Page' content item.",
+        "operationId": "PatchPageContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The data of the content.\n            \nPlease note that each field is an object with one entry per language. \nIf the field is not localizable you must use `iv` (invariant language) as a key.\n\nRead more about it at: https://docs.squidex.io/04-guides/02-api.html",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PageDataDto"
+            },
+            "x-name": "data",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item updated.",
+            "schema": {
+              "$ref": "#/definitions/PageContentDto"
+            }
+          },
+          "400": {
+            "description": "Content data not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.update.own"
+            ]
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Delete a 'Page' content item.",
+        "operationId": "DeletePageContent",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "permanent",
+            "description": "True when the entity should be deleted permanently.",
+            "type": "boolean",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "204": {
+            "description": "Content item deleted"
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.delete.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/page/{id}/{version}": {
+      "get": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Get a 'Page' content item by id and version.",
+        "operationId": "GetVersionedPageContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "version",
+            "description": "The version of the objec.",
+            "required": true,
+            "type": "number",
+            "x-position": 0
+          },
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item returned.",
+            "schema": {
+              "$ref": "#/definitions/PageDataDto"
+            }
+          }
+        },
+        "deprecated": true,
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/page/{id}/validity": {
+      "get": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Validates a 'Page' content item.",
+        "operationId": "ValidatePageContent",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item is valid."
+          },
+          "400": {
+            "description": "Content item is not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/page/bulk": {
+      "post": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Bulk update content items.",
+        "operationId": "BulkPageContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BulkUpdateContentsDto"
+            },
+            "x-name": "request",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contents created, update or delete.",
+            "schema": {
+              "$ref": "#/definitions/BulkResultDto"
+            }
+          },
+          "400": {
+            "description": "Contents request not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/page/{id}/defaults": {
+      "put": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Apply a 'Page' content item. defaults",
+        "operationId": "UpdateDefaultsPageContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content item updated.",
+            "schema": {
+              "$ref": "#/definitions/PageContentDto"
+            }
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.update.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/page/{id}/status": {
+      "put": {
+        "tags": [
+          "Page"
+        ],
+        "summary": "Change the status of a 'Page' content item.",
+        "operationId": "ChangePageContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "description": "The ID of the object (usually GUID).",
+            "required": true,
+            "type": "string",
+            "x-position": 0
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "The request to change content status.",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ChangeStatusDto"
+            },
+            "x-name": "request",
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "404": {
+            "description": "Content item not found."
+          },
+          "200": {
+            "description": "Content status updated.",
+            "schema": {
+              "$ref": "#/definitions/PageContentDto"
+            }
+          },
+          "400": {
+            "description": "Content status not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.page.changestatus.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/": {
+      "get": {
+        "tags": [
+          "__Shared"
+        ],
+        "summary": "Query contents across all schemas.",
+        "operationId": "Query__SharedContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "ids",
+            "description": "Comma-separated list of content IDs.",
+            "type": "string",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Content items retrieved.",
+            "schema": {
+              "$ref": "#/definitions/ContentResultDto"
+            }
+          },
+          "400": {
+            "description": "Query not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.__Shared.read.own"
+            ]
+          }
+        ]
+      }
+    },
+    "/api/content/echotone/bulk": {
+      "post": {
+        "tags": [
+          "__Shared"
+        ],
+        "summary": "Bulk update content items across all schemas.",
+        "operationId": "Bulk__SharedContent",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/BulkUpdateContentsDto"
+            },
+            "x-name": "request",
+            "x-position": 0
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Contents created, update or delete.",
+            "schema": {
+              "$ref": "#/definitions/BulkResultDto"
+            }
+          },
+          "400": {
+            "description": "Contents request not valid."
+          }
+        },
+        "security": [
+          {
+            "squidex-oauth-auth": [
+              "squidex.apps.echotone.contents.__Shared.read.own"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "ChangeStatusDto": {
+      "required": [
+        "status"
+      ],
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "The new status.",
+          "type": "string"
+        },
+        "dueTime": {
+          "format": "date-time",
+          "description": "The due time.",
+          "type": "string"
+        },
+        "checkReferrers": {
+          "description": "True to check referrers of this content.",
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "BulkUpdateContentsDto": {
+      "required": [
+        "jobs"
+      ],
+      "type": "object",
+      "properties": {
+        "jobs": {
+          "description": "The contents to update or insert.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BulkUpdateContentsJobDto"
+          }
+        },
+        "publish": {
+          "description": "True to automatically publish the content.",
+          "type": "boolean",
+          "x-deprecatedMessage": "Use 'jobs.status' fields now."
+        },
+        "doNotScript": {
+          "description": "True to turn off scripting for faster inserts. Default: true.",
+          "type": "boolean"
+        },
+        "enrichRequiredFields": {
+          "description": "True, to also enrich required fields. Default: false.\n            ",
+          "type": "boolean"
+        },
+        "doNotValidate": {
+          "description": "True to turn off validation for faster inserts. Default: false.",
+          "type": "boolean"
+        },
+        "doNotValidateWorkflow": {
+          "description": "True to turn off validation of workflow rules. Default: false.",
+          "type": "boolean"
+        },
+        "checkReferrers": {
+          "description": "True to check referrers of deleted contents.",
+          "type": "boolean"
+        },
+        "optimizeValidation": {
+          "description": "True to turn off costly validation: Unique checks, asset checks and reference checks. Default: true.",
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "BulkUpdateContentsJobDto": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "$ref": "#/definitions/QueryJsonDto"
+        },
+        "id": {
+          "description": "An optional ID of the content to update.",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/ContentData"
+        },
+        "status": {
+          "description": "The new status when the type is set to 'ChangeStatus' or 'Upsert'.",
+          "type": "string"
+        },
+        "dueTime": {
+          "format": "date-time",
+          "description": "The due time.",
+          "type": "string"
+        },
+        "type": {
+          "$ref": "#/definitions/BulkUpdateContentType"
+        },
+        "schema": {
+          "description": "The optional schema id or name.",
+          "type": "string"
+        },
+        "patch": {
+          "description": "Makes the update as patch.",
+          "type": "boolean"
+        },
+        "permanent": {
+          "description": "True to delete the content permanently.",
+          "type": "boolean"
+        },
+        "enrichDefaults": {
+          "description": "Enrich the data with the default values when updating a content item.",
+          "type": "boolean"
+        },
+        "expectedCount": {
+          "format": "int64",
+          "description": "The number of expected items. Set it to a higher number to update multiple items when a query is defined.",
+          "type": "integer"
+        },
+        "expectedVersion": {
+          "format": "int64",
+          "description": "The expected version.",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "QueryJsonDto": {
+      "required": [
+        "skip",
+        "take",
+        "random",
+        "top"
+      ],
+      "type": "object",
+      "properties": {
+        "filter": {},
+        "fullText": {
+          "type": "string"
+        },
+        "collation": {
+          "type": "string"
+        },
+        "skip": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "take": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "random": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "top": {
+          "format": "int64",
+          "type": "integer"
+        },
+        "sort": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SortNode"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "SortNode": {
+      "required": [
+        "path",
+        "order"
+      ],
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "order": {
+          "$ref": "#/definitions/SortOrder"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SortOrder": {
+      "description": "",
+      "enum": [
+        "Ascending",
+        "Descending"
+      ],
+      "type": "string",
+      "x-enumNames": [
+        "Ascending",
+        "Descending"
+      ]
+    },
+    "ContentData": {
+      "type": "object",
+      "additionalProperties": false
+    },
+    "BulkUpdateContentType": {
+      "description": "",
+      "enum": [
+        "Upsert",
+        "ChangeStatus",
+        "Create",
+        "Delete",
+        "Patch",
+        "Update",
+        "Validate",
+        "EnrichDefaults"
+      ],
+      "type": "string",
+      "x-enumNames": [
+        "Upsert",
+        "ChangeStatus",
+        "Create",
+        "Delete",
+        "Patch",
+        "Update",
+        "Validate",
+        "EnrichDefaults"
+      ]
+    },
+    "BulkResultDto": {
+      "required": [
+        "jobIndex"
+      ],
+      "type": "object",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/ErrorDto"
+        },
+        "jobIndex": {
+          "format": "int32",
+          "description": "The index of the bulk job where the result belongs to. The order can change.",
+          "type": "integer"
+        },
+        "id": {
+          "description": "The ID of the entity that has been handled successfully or not.",
+          "type": "string"
+        },
+        "contentId": {
+          "description": "The ID of the entity that has been handled successfully or not.",
+          "type": "string",
+          "x-deprecatedMessage": "Use 'id' field now."
+        }
+      },
+      "additionalProperties": false
+    },
+    "ErrorDto": {
+      "required": [
+        "message",
+        "statusCode"
+      ],
+      "type": "object",
+      "properties": {
+        "message": {
+          "description": "Error message.",
+          "minLength": 1,
+          "type": "string"
+        },
+        "errorCode": {
+          "description": "The error code.",
+          "type": "string"
+        },
+        "traceId": {
+          "description": "The optional trace id.",
+          "type": "string"
+        },
+        "type": {
+          "description": "Link to the error details.",
+          "type": "string"
+        },
+        "details": {
+          "description": "Detailed error messages.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "statusCode": {
+          "format": "int32",
+          "description": "Status code of the http response.",
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "QueryDto": {
+      "type": "object",
+      "properties": {
+        "ids": {
+          "description": "The optional list of ids to query.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "oData": {
+          "description": "The optional odata query.",
+          "type": "string"
+        },
+        "q": {
+          "description": "The optional json query."
+        },
+        "parentId": {
+          "description": "The parent id (for assets).",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UnitComponentDto": {
+      "required": [
+        "title"
+      ],
+      "type": "object",
+      "properties": {
+        "title": {
+          "description": "title",
+          "type": "string"
+        },
+        "short": {
+          "description": "short",
+          "type": "string"
+        },
+        "text": {
+          "description": "text",
+          "type": "string"
+        },
+        "tags": {
+          "description": "tags",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "temporal": {
+          "description": "temporal",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnitTemporalItemDto"
+          }
+        },
+        "locations": {
+          "description": "locations",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/UnitLocationsItemDto"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "UnitTemporalItemDto": {
+      "type": "object",
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "datetime": {
+          "format": "date-time",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "UnitLocationsItemDto": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "format": "geo-json",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    },
+    "AboutDataDto": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "description": "content",
+          "type": "object",
+          "additionalProperties": {
+            "required": [
+              "schemaId"
+            ],
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/definitions/UnitComponentDto"
+              }
+            ],
+            "properties": {
+              "schemaId": {
+                "type": "string"
+              }
+            },
+            "discriminator": "schemaId"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "AboutContentDto": {
+      "required": [
+        "id",
+        "created",
+        "createdBy",
+        "lastModified",
+        "lastModifiedBy",
+        "status",
+        "schemaId",
+                "schemaDisplayName",
+        "statusColor",
+        "data"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "The ID of the object (usually GUID).",
+          "type": "string"
+        },
+        "created": {
+          "format": "date-time",
+          "description": "The timestamp when the object was created.",
+          "type": "string"
+        },
+        "createdBy": {
+          "description": "The user who created the object.",
+          "type": "string"
+        },
+        "lastModified": {
+          "format": "date-time",
+          "description": "The timestamp when the object was updated the last time.",
+          "type": "string"
+        },
+        "lastModifiedBy": {
+          "description": "The user who updated the object the last time.",
+          "type": "string"
+        },
+        "newStatus": {
+          "description": "The new status of the content.",
+          "type": "string"
+        },
+        "status": {
+          "description": "The status of the content.",
+          "type": "string"
+        },
+        "newStatusColor": {
+          "description": "The new status color of the content.",
+          "type": "string"
+        },
+        "schemaId": {
+          "description": "The ID of the schema.",
+          "type": "string"
+        },
+        "schemaDisplayName": {
+          "description": "The display name of the schema.",
+          "type": "string"
+        },
+        "statusColor": {
+          "description": "The status color of the content.",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/AboutDataDto"
+        }
+      },
+      "additionalProperties": false
+    },
+    "AboutContentResultDto": {
+      "required": [
+        "total",
+        "items"
+      ],
+      "type": "object",
+      "properties": {
+        "total": {
+          "description": "The total count of  contents.",
+          "type": "number"
+        },
+        "items": {
+          "description": "The contents.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/AboutContentDto"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ContactDataDto": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "description": "content",
+          "type": "object",
+          "additionalProperties": {
+            "required": [
+              "schemaId"
+            ],
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/definitions/UnitComponentDto"
+              }
+            ],
+            "properties": {
+              "schemaId": {
+                "type": "string"
+              }
+            },
+            "discriminator": "schemaId"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ContactContentDto": {
+      "required": [
+        "id",
+        "created",
+        "createdBy",
+        "lastModified",
+        "lastModifiedBy",
+        "status",
+        "schemaId",
+                "schemaDisplayName",
+        "statusColor",
+        "data"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "The ID of the object (usually GUID).",
+          "type": "string"
+        },
+        "created": {
+          "format": "date-time",
+          "description": "The timestamp when the object was created.",
+          "type": "string"
+        },
+        "createdBy": {
+          "description": "The user who created the object.",
+          "type": "string"
+        },
+        "lastModified": {
+          "format": "date-time",
+          "description": "The timestamp when the object was updated the last time.",
+          "type": "string"
+        },
+        "lastModifiedBy": {
+          "description": "The user who updated the object the last time.",
+          "type": "string"
+        },
+        "newStatus": {
+          "description": "The new status of the content.",
+          "type": "string"
+        },
+        "status": {
+          "description": "The status of the content.",
+          "type": "string"
+        },
+        "newStatusColor": {
+          "description": "The new status color of the content.",
+          "type": "string"
+        },
+        "schemaId": {
+          "description": "The ID of the schema.",
+          "type": "string"
+        },
+        "schemaDisplayName": {
+          "description": "The display name of the schema.",
+          "type": "string"
+        },
+        "statusColor": {
+          "description": "The status color of the content.",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/ContactDataDto"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ContactContentResultDto": {
+      "required": [
+        "total",
+        "items"
+      ],
+      "type": "object",
+      "properties": {
+        "total": {
+          "description": "The total count of  contents.",
+          "type": "number"
+        },
+        "items": {
+          "description": "The contents.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContactContentDto"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "CarouselComponentDto": {
+      "type": "object",
+      "properties": {
+        "medias": {
+          "description": "medias",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "in": {
+          "description": "in",
+          "default": true,
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PageDataDto": {
+      "type": "object",
+      "properties": {
+        "unit": {
+          "description": "unit",
+          "type": "object",
+          "additionalProperties": {
+            "required": [
+              "schemaId"
+            ],
+            "type": "object",
+            "allOf": [
+              {
+                "$ref": "#/definitions/UnitComponentDto"
+              }
+            ],
+            "properties": {
+              "schemaId": {
+                "type": "string"
+              }
+            },
+            "discriminator": "schemaId"
+          }
+        },
+        "medias": {
+          "description": "medias",
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "required": [
+                "schemaId"
+              ],
+              "type": "object",
+              "allOf": [
+                {
+                  "$ref": "#/definitions/CarouselComponentDto"
+                }
+              ],
+              "properties": {
+                "schemaId": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false,
+              "discriminator": "schemaId"
+            }
+          }
+        },
+        "id": {
+          "description": "id",
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "PageContentDto": {
+      "required": [
+        "id",
+        "created",
+        "createdBy",
+        "lastModified",
+        "lastModifiedBy",
+        "status",
+        "schemaId",
+                "schemaDisplayName",
+        "statusColor",
+        "data"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "The ID of the object (usually GUID).",
+          "type": "string"
+        },
+        "created": {
+          "format": "date-time",
+          "description": "The timestamp when the object was created.",
+          "type": "string"
+        },
+        "createdBy": {
+          "description": "The user who created the object.",
+          "type": "string"
+        },
+        "lastModified": {
+          "format": "date-time",
+          "description": "The timestamp when the object was updated the last time.",
+          "type": "string"
+        },
+        "lastModifiedBy": {
+          "description": "The user who updated the object the last time.",
+          "type": "string"
+        },
+        "newStatus": {
+          "description": "The new status of the content.",
+          "type": "string"
+        },
+        "status": {
+          "description": "The status of the content.",
+          "type": "string"
+        },
+        "newStatusColor": {
+          "description": "The new status color of the content.",
+          "type": "string"
+        },
+        "schemaId": {
+          "description": "The ID of the schema.",
+          "type": "string"
+        },
+        "schemaDisplayName": {
+          "description": "The display name of the schema.",
+          "type": "string"
+        },
+        "statusColor": {
+          "description": "The status color of the content.",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/PageDataDto"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PageContentResultDto": {
+      "required": [
+        "total",
+        "items"
+      ],
+      "type": "object",
+      "properties": {
+        "total": {
+          "description": "The total count of  contents.",
+          "type": "number"
+        },
+        "items": {
+          "description": "The contents.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PageContentDto"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "DataDto": {},
+    "ContentDto": {
+      "required": [
+        "id",
+        "created",
+        "createdBy",
+        "lastModified",
+        "lastModifiedBy",
+        "status",
+        "schemaId",
+                "schemaDisplayName",
+        "statusColor",
+        "data"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "The ID of the object (usually GUID).",
+          "type": "string"
+        },
+        "created": {
+          "format": "date-time",
+          "description": "The timestamp when the object was created.",
+          "type": "string"
+        },
+        "createdBy": {
+          "description": "The user who created the object.",
+          "type": "string"
+        },
+        "lastModified": {
+          "format": "date-time",
+          "description": "The timestamp when the object was updated the last time.",
+          "type": "string"
+        },
+        "lastModifiedBy": {
+          "description": "The user who updated the object the last time.",
+          "type": "string"
+        },
+        "newStatus": {
+          "description": "The new status of the content.",
+          "type": "string"
+        },
+        "status": {
+          "description": "The status of the content.",
+          "type": "string"
+        },
+        "newStatusColor": {
+          "description": "The new status color of the content.",
+          "type": "string"
+        },
+        "schemaId": {
+          "description": "The ID of the schema.",
+          "type": "string"
+        },
+        "schemaDisplayName": {
+          "description": "The display name of the schema.",
+          "type": "string"
+        },
+        "statusColor": {
+          "description": "The status color of the content.",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/DataDto"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ContentResultDto": {
+      "required": [
+        "total",
+        "items"
+      ],
+      "type": "object",
+      "properties": {
+        "total": {
+          "description": "The total count of  contents.",
+          "type": "number"
+        },
+        "items": {
+          "description": "The contents.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ContentDto"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "securityDefinitions": {
+    "squidex-oauth-auth": {}
+  },
+  "security": [
+    {
+      "squidex-oauth-auth": [
+        "squidex-api"
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "name": "About",
+      "description": "API endpoints for 'À propos' content items."
+    },
+    {
+      "name": "Contact",
+      "description": "API endpoints for 'Informations pratiques' content items."
+    },
+    {
+      "name": "Page",
+      "description": "API endpoints for 'Page' content items."
+    },
+    {
+      "name": "__Shared",
+      "description": "API endpoints for operations across all schemas."
+    }
+  ],
+  "externalDocs": {
+    "url": "https://docs.squidex.io"
+  }
+}

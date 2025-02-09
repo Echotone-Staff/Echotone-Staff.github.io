@@ -1,0 +1,15 @@
+query Assets {
+  queryAssets {
+    id
+    thumbnailUrl
+    fileName
+    fileHash
+    fileType
+    fileSize
+    slug
+    tags
+    sourceUrl
+    lastModified
+    url
+  }
+}

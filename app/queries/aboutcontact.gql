@@ -1,0 +1,27 @@
+query aboutcontact {
+  findAboutSingleton {
+    data {
+      content {
+        fr {
+          title
+          short
+          text
+        }
+      }
+    }
+  },
+  findContactSingleton {
+    data {
+      content {
+        fr {
+          title
+          short
+          text
+          locations {
+            location
+          }
+        }
+      }
+    }
+  }
+}

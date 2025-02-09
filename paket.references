@@ -1,0 +1,4 @@
+group FAKE
+Fake.Core.Target
+Fake.DotNet.Cli
+Fake.JavaScript.Npm

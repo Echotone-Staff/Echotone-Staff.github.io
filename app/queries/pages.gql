@@ -1,0 +1,24 @@
+query pages {
+queryPageContents {
+  data {
+    unit {
+      fr {
+        title
+        short
+        text
+      }
+    }
+    medias {
+      iv {
+        medias {
+          url
+          thumbnailUrl
+          fileType
+          fileName
+          fileHash
+        }
+      }
+    }
+  }
+}
+}

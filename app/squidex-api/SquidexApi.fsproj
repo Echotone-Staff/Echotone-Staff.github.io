@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="SquidexApi.StringEnum.fs" />
+    <Compile Include="SquidexApi.Types.fs" />
+    <Compile Include="SquidexApi.Aboutcontact.fs" />
+    <Compile Include="SquidexApi.Assets.fs" />
+    <Compile Include="SquidexApi.Pages.fs" />
+    <Compile Include="SquidexApi.GraphqlClient.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="6.0.1" />
+    <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
+    <PackageReference Include="FSharp.SystemTextJson" Version="1.0.6" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
