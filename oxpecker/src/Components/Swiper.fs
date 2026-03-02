@@ -5,11 +5,11 @@ open Fable.Core
 
 [<CompiledName("swiper-container")>]
 type SwiperContainer() =
-    inherit RegularNode()
+    interface RegularNode
 
 [<CompiledName("swiper-slide")>]
 type SwiperSlide() =
-    inherit RegularNode()
+    interface RegularNode
 
 module Swiper =
     [<Import("register", "swiper/element/bundle")>]

@@ -17,6 +17,332 @@
     {
       "_links": {
         "delete": {
+          "href": "/api/content/echotone/page/0588d0de-fb45-438f-b137-048d193b7871",
+          "method": "DELETE"
+        },
+        "draft/create": {
+          "href": "/api/content/echotone/page/0588d0de-fb45-438f-b137-048d193b7871/draft",
+          "method": "POST"
+        },
+        "previous": {
+          "href": "/api/content/echotone/page/0588d0de-fb45-438f-b137-048d193b7871/2",
+          "method": "GET"
+        },
+        "self": {
+          "href": "/api/content/echotone/page/0588d0de-fb45-438f-b137-048d193b7871",
+          "method": "GET"
+        }
+      },
+      "created": "2026-03-02T18:21:38Z",
+      "createdBy": "subject:6798df7c5b784ee7b7cb52e1",
+      "data": {
+        "id": {
+          "iv": "franklin-bault"
+        },
+        "medias": {
+          "iv": [
+            {
+              "caption": null,
+              "in": true,
+              "inslides": null,
+              "medias": [
+                "35e3b1c8-8e6c-484c-9d4b-5609c0bb89c7",
+                "f676831e-fb2f-4846-8541-9f01eafeb373",
+                "9a4cd1d1-357b-4bd6-a889-3624a4a75186"
+              ],
+              "schemaId": "1f4e3697-52bc-45d9-a7a8-65862c13ce4b",
+              "schemaName": "carousel"
+            }
+          ]
+        },
+        "unit": {
+          "en": {
+            "locations": [],
+            "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
+            "schemaName": "unit",
+            "short": "parti pour les \u00E9toiles, installation, 2026.",
+            "tags": [
+              "programmation",
+              "accueil",
+              "p\u00E9riode"
+            ],
+            "temporal": [
+              {
+                "date": "2026-03-13T00:00:00Z",
+                "datetime": null,
+                "description": "Vernissage 18h, vendredi 13 mars 2026"
+              },
+              {
+                "date": null,
+                "datetime": "2026-03-20T00:00:00Z",
+                "description": "exposition jusqu\u0027au 20 mars"
+              }
+            ],
+            "text": "\u003Cp\u003E\u003Cstrong\u003EVERNISSAGE vendredi 13 mars 2026 \u00E0 partir de 18h\u003Cbr\u003EEntr\u00E9e libre les ven\u00ADdre\u00ADdis de 14h a\u0300 17h et sur rdv jusqu\u0027au 20 mars 2026.\u0026nbsp;\u003C/strong\u003E\u003Cbr\u003E\u003Cbr\u003E\u0022 La d\u00E9couverte (ou red\u00E9couverte) de la repr\u00E9sentation perspectiviste est \u00E0 ce point fondamentale qu\u2019elle a largement particip\u00E9 au renouveau artistique li\u00E9 \u00E0 la renaissance. Ce type de repr\u00E9sentation porte n\u00E9anmoins en elle une question voir un paradoxe : la perspective est-elle une illusion picturale, voir une illusion \u201Cr\u00E9elle\u201D seulement n\u00E9cessaire \u00E0 la perception de la profondeur ? Mon but ici n\u2019est pas de donner une r\u00E9ponse \u00E0 cette question, mais cet espace\u0026nbsp;m\u2019a justement invit\u00E9 par sa profondeur \u00E0 r\u00E9interroger cette probl\u00E9matique r\u00E9currente dans mon travail \u00E0 travers une installation.\u003Cbr\u003EL\u2019objectif initial consistait \u00E0 compenser la convergence de lignes parall\u00E8les vers un point de fuite due \u00E0 la perspective, en tirant des fils qui divergeraient r\u00E9ellement (cr\u00E9ant alors l\u2019illusion de fils parall\u00E8les) ; j\u2019insuffle donc dans un espace r\u00E9el ce concept de perspective normalement cantonn\u00E9 \u00E0 une approche picturale. Cette id\u00E9e premi\u00E8re de compensation s\u2019est un peu effac\u00E9e au cours du processus de conception de l\u2019installation. Les diff\u00E9rentes d\u00E9cisions artistiques et dialogues ont alors permis d\u2019ajouter \u00E0 ce concept brut de perspective un hors-champ vraiment po\u00E9tique.\u003Cbr\u003ECette installation ne sera pas totalement fig\u00E9e dans sa forme, puisque cet id\u00E9e de compensation de la perspective pourra \u00EAtre exp\u00E9riment\u00E9e gr\u00E2ce \u00E0 l\u2019ajout ult\u00E9rieur de fils dans le temps d\u2019exposition. C\u2019est sans doutes le sens des questions artistiques, mat\u00E9rialis\u00E9es ici par une r\u00E9sidence de recherches, de rester \u00E9volutives.\u0022\u003Cbr\u003E\u003Cbr\u003ECette installation accueille les \u00E9l\u00E8ves de l\u2019\u00E9cole \u00E9l\u00E9mentaire de Ganges et cr\u00E9e un espace de rencontre privil\u00E9gi\u00E9e avec une recherche\u0026nbsp;artistique. Elle permet aux enfants d\u2019entrer en contact direct avec l\u2019artiste, de d\u00E9couvrir son univers et d\u2019exp\u00E9rimenter une relation vivante \u00E0 la cr\u00E9ation.\u0026nbsp;\u003Cbr\u003EAu c\u0153ur de sa programmation, \u00C9chotone met en relation l\u2019artiste et les publics \u003Cstrong\u003Edans la proximit\u00E9 d\u2019une recherche vivante\u003C/strong\u003E, invitant chacun \u00E0 explorer les processus de cr\u00E9ation.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E",
+            "title": "FRANKLIN BAULT"
+          },
+          "fr": {
+            "locations": [],
+            "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
+            "schemaName": "unit",
+            "short": "parti pour les \u00E9toiles, installation, 2026.",
+            "tags": [
+              "programmation",
+              "accueil",
+              "p\u00E9riode"
+            ],
+            "temporal": [
+              {
+                "date": "2026-03-13T00:00:00Z",
+                "datetime": null,
+                "description": "Vernissage 18h, vendredi 13 mars 2026"
+              },
+              {
+                "date": null,
+                "datetime": "2026-03-20T00:00:00Z",
+                "description": "exposition jusqu\u0027au 20 mars"
+              }
+            ],
+            "text": "\u003Cp\u003E\u003Cstrong\u003EVERNISSAGE vendredi 13 mars 2026 \u00E0 partir de 18h\u003Cbr\u003EEntr\u00E9e libre les ven\u00ADdre\u00ADdis de 14h a\u0300 17h et sur rdv jusqu\u0027au 20 mars 2026.\u0026nbsp;\u003C/strong\u003E\u003Cbr\u003E\u003Cbr\u003E\u0022 La d\u00E9couverte (ou red\u00E9couverte) de la repr\u00E9sentation perspectiviste est \u00E0 ce point fondamentale qu\u2019elle a largement particip\u00E9 au renouveau artistique li\u00E9 \u00E0 la renaissance. Ce type de repr\u00E9sentation porte n\u00E9anmoins en elle une question voir un paradoxe : la perspective est-elle une illusion picturale, voir une illusion \u201Cr\u00E9elle\u201D seulement n\u00E9cessaire \u00E0 la perception de la profondeur ? Mon but ici n\u2019est pas de donner une r\u00E9ponse \u00E0 cette question, mais cet espace\u0026nbsp;m\u2019a justement invit\u00E9 par sa profondeur \u00E0 r\u00E9interroger cette probl\u00E9matique r\u00E9currente dans mon travail \u00E0 travers une installation.\u003Cbr\u003EL\u2019objectif initial consistait \u00E0 compenser la convergence de lignes parall\u00E8les vers un point de fuite due \u00E0 la perspective, en tirant des fils qui divergeraient r\u00E9ellement (cr\u00E9ant alors l\u2019illusion de fils parall\u00E8les) ; j\u2019insuffle donc dans un espace r\u00E9el ce concept de perspective normalement cantonn\u00E9 \u00E0 une approche picturale. Cette id\u00E9e premi\u00E8re de compensation s\u2019est un peu effac\u00E9e au cours du processus de conception de l\u2019installation. Les diff\u00E9rentes d\u00E9cisions artistiques et dialogues ont alors permis d\u2019ajouter \u00E0 ce concept brut de perspective un hors-champ vraiment po\u00E9tique.\u003Cbr\u003ECette installation ne sera pas totalement fig\u00E9e dans sa forme, puisque cet id\u00E9e de compensation de la perspective pourra \u00EAtre exp\u00E9riment\u00E9e gr\u00E2ce \u00E0 l\u2019ajout ult\u00E9rieur de fils dans le temps d\u2019exposition. C\u2019est sans doutes le sens des questions artistiques, mat\u00E9rialis\u00E9es ici par une r\u00E9sidence de recherches, de rester \u00E9volutives.\u0022\u003Cbr\u003E\u003Cbr\u003ECette installation accueille les \u00E9l\u00E8ves de l\u2019\u00E9cole \u00E9l\u00E9mentaire de Ganges et cr\u00E9e un espace de rencontre privil\u00E9gi\u00E9e avec une recherche\u0026nbsp;artistique. Elle permet aux enfants d\u2019entrer en contact direct avec l\u2019artiste, de d\u00E9couvrir son univers et d\u2019exp\u00E9rimenter une relation vivante \u00E0 la cr\u00E9ation.\u0026nbsp;\u003Cbr\u003EAu c\u0153ur de sa programmation, \u00C9chotone met en relation l\u2019artiste et les publics \u003Cstrong\u003Edans la proximit\u00E9 d\u2019une recherche vivante\u003C/strong\u003E, invitant chacun \u00E0 explorer les processus de cr\u00E9ation.\u003C/p\u003E\u003Cp\u003E\u003C/p\u003E",
+            "title": "FRANKLIN BAULT"
+          }
+        }
+      },
+      "editToken": "eyJhIjoiZWNob3RvbmUiLCJzIjoicGFnZSIsImkiOiIwNTg4ZDBkZS1mYjQ1LTQzOGYtYjEzNy0wNDhkMTkzYjc4NzEiLCJ1IjoiaHR0cHM6Ly9sYWFiLmRkbnMubmV0OjM4MDgwLyJ9",
+      "id": "0588d0de-fb45-438f-b137-048d193b7871",
+      "isDeleted": false,
+      "lastModified": "2026-03-02T20:16:04Z",
+      "lastModifiedBy": "subject:6798df7c5b784ee7b7cb52e1",
+      "schemaDisplayName": "Page",
+      "schemaId": "d0379b0e-294e-4df6-9b2b-257b807b1467",
+      "schemaName": "page",
+      "status": "Published",
+      "statusColor": "#4bb958",
+      "version": 3
+    },
+    {
+      "_links": {
+        "delete": {
+          "href": "/api/content/echotone/page/66d1af60-0e5b-4cc7-9c2e-fe965f31d278",
+          "method": "DELETE"
+        },
+        "draft/create": {
+          "href": "/api/content/echotone/page/66d1af60-0e5b-4cc7-9c2e-fe965f31d278/draft",
+          "method": "POST"
+        },
+        "previous": {
+          "href": "/api/content/echotone/page/66d1af60-0e5b-4cc7-9c2e-fe965f31d278/7",
+          "method": "GET"
+        },
+        "self": {
+          "href": "/api/content/echotone/page/66d1af60-0e5b-4cc7-9c2e-fe965f31d278",
+          "method": "GET"
+        }
+      },
+      "created": "2025-09-15T08:05:49Z",
+      "createdBy": "subject:6798df7c5b784ee7b7cb52e1",
+      "data": {
+        "id": {
+          "iv": "photographie-argentique-et-experimentale"
+        },
+        "medias": {
+          "iv": [
+            {
+              "caption": null,
+              "in": true,
+              "inslides": null,
+              "medias": [
+                "73fc0c81-2ff7-4632-a318-c630c668c35c",
+                "56df5e08-f891-4d1a-8f82-6f27f63dc65d",
+                "1200e7a2-202e-4ce1-aa3b-33d9dba8c6e0",
+                "c94774e6-9128-41fe-af07-0388efc188b6",
+                "0181af71-7215-4e69-b312-6de2ca65aa69",
+                "4aa23196-de85-44ab-a1a2-3006dc3fba23",
+                "3736fa0c-548a-4580-9356-bb5c30384c4a",
+                "7582659c-1415-4739-a76f-2c1972b59da7",
+                "d722b622-c5df-40a5-9e10-85fb9a4ed389",
+                "6738e981-6494-487d-9006-00c2775bcc6b",
+                "a258b1f5-48b8-43e7-bb05-bae337a30697"
+              ],
+              "schemaId": "1f4e3697-52bc-45d9-a7a8-65862c13ce4b",
+              "schemaName": "carousel"
+            }
+          ]
+        },
+        "unit": {
+          "en": {
+            "locations": [],
+            "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
+            "schemaName": "unit",
+            "short": "Atelier Mensuel de 3h, les mardis ou mercredis",
+            "tags": [
+              "atelier"
+            ],
+            "temporal": [
+              {
+                "date": null,
+                "datetime": null,
+                "description": "Le mardi ou le mercredi, une fois par mois"
+              }
+            ],
+            "text": "\u003Cp\u003E\u003Cstrong\u003E1 fois par mois\u003C/strong\u003E, cet atelier est men\u00E9 par l\u0027artiste C\u00E9line Courtault Capelier.\u003Cbr\u003EL\u0027atelier aborde le \u003Cstrong\u003Ed\u00E9veloppement classique jusqu\u0027aux traitements alternatifs\u003C/strong\u003E et moins polluants (ex. caf\u00E9nole) d\u0027une pellicule argentique, ainsi que la photographie exp\u00E9rimentale sans appareil comme le \u003Cstrong\u003Ephotogramme (ou rayogramme), alt\u00E9ration, coloration, lumen print..\u003C/strong\u003E.\u003Cbr\u003E\u003Cbr\u003ETout public \u00E0 partir de 16 ans\u003Cbr\u003ETarif 15\u20AC les trois heures avec les produits photo-argentique compris, sans les consommables (papiers...)\u003Cbr\u003E\u002B adh\u00E9sion \u00E0 l\u0027association \u00E0 partir de 2\u20AC\u003Cbr\u003E\u003Cbr\u003EJauge minimale de 6 personnes, maximale de 8 personnes.\u003Cbr\u003EContactez-nous !\u003C/p\u003E",
+            "title": "Photographie argentique et exp\u00E9rimentale"
+          },
+          "fr": {
+            "locations": [],
+            "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
+            "schemaName": "unit",
+            "short": "Atelier Mensuel de 3h, les mardis ou mercredis",
+            "tags": [
+              "atelier"
+            ],
+            "temporal": [
+              {
+                "date": null,
+                "datetime": null,
+                "description": "Le mardi ou le mercredi, une fois par mois"
+              }
+            ],
+            "text": "\u003Cp\u003E\u003Cstrong\u003E1 fois par mois\u003C/strong\u003E, cet atelier est men\u00E9 par l\u0027artiste C\u00E9line Courtault Capelier.\u003Cbr\u003EL\u0027atelier aborde le \u003Cstrong\u003Ed\u00E9veloppement classique jusqu\u0027aux traitements alternatifs\u003C/strong\u003E et moins polluants (ex. caf\u00E9nole) d\u0027une pellicule argentique, ainsi que la photographie exp\u00E9rimentale sans appareil comme le \u003Cstrong\u003Ephotogramme (ou rayogramme), alt\u00E9ration, coloration, lumen print..\u003C/strong\u003E.\u003Cbr\u003E\u003Cbr\u003ETout public \u00E0 partir de 16 ans\u003Cbr\u003ETarif 15\u20AC les trois heures avec les produits photo-argentique compris, sans les consommables (papiers...)\u003Cbr\u003E\u002B adh\u00E9sion \u00E0 l\u0027association \u00E0 partir de 2\u20AC\u003Cbr\u003E\u003Cbr\u003EJauge minimale de 6 personnes, maximale de 8 personnes.\u003Cbr\u003EContactez-nous !\u003C/p\u003E",
+            "title": "Photographie argentique et exp\u00E9rimentale"
+          }
+        }
+      },
+      "editToken": "eyJhIjoiZWNob3RvbmUiLCJzIjoicGFnZSIsImkiOiI2NmQxYWY2MC0wZTViLTRjYzctOWMyZS1mZTk2NWYzMWQyNzgiLCJ1IjoiaHR0cHM6Ly9sYWFiLmRkbnMubmV0OjM4MDgwLyJ9",
+      "id": "66d1af60-0e5b-4cc7-9c2e-fe965f31d278",
+      "isDeleted": false,
+      "lastModified": "2026-01-15T12:48:21Z",
+      "lastModifiedBy": "subject:6798df7c5b784ee7b7cb52e1",
+      "schemaDisplayName": "Page",
+      "schemaId": "d0379b0e-294e-4df6-9b2b-257b807b1467",
+      "schemaName": "page",
+      "status": "Published",
+      "statusColor": "#4bb958",
+      "version": 8
+    },
+    {
+      "_links": {
+        "delete": {
+          "href": "/api/content/echotone/page/e30a2748-3116-4604-8315-1837a9bb2cd6",
+          "method": "DELETE"
+        },
+        "draft/create": {
+          "href": "/api/content/echotone/page/e30a2748-3116-4604-8315-1837a9bb2cd6/draft",
+          "method": "POST"
+        },
+        "previous": {
+          "href": "/api/content/echotone/page/e30a2748-3116-4604-8315-1837a9bb2cd6/22",
+          "method": "GET"
+        },
+        "self": {
+          "href": "/api/content/echotone/page/e30a2748-3116-4604-8315-1837a9bb2cd6",
+          "method": "GET"
+        }
+      },
+      "created": "2025-11-24T15:12:04Z",
+      "createdBy": "subject:6798df7c5b784ee7b7cb52e1",
+      "data": {
+        "id": {
+          "iv": "echomarket-exposition"
+        },
+        "medias": {
+          "iv": [
+            {
+              "caption": null,
+              "in": true,
+              "inslides": null,
+              "medias": [
+                "a3f38990-4f63-4f38-b7e0-23d3831f81bd",
+                "078d795c-b187-44bd-8b46-5239533b60bb",
+                "c4fc1f5d-05db-4b5c-b33c-0f1ba43cabde",
+                "2c1c6aae-0a37-439e-8a53-526073432ca6",
+                "778efdbe-29e6-4732-9d06-6b7ad66bc433",
+                "2383aa58-50a7-48f7-aee0-05cb1c89169e",
+                "661ef6b4-d107-4852-80d3-c8731e035450",
+                "7e9b4df0-772f-4145-8e0f-793c48ae5241",
+                "9c63dc38-e1f0-4630-8ada-3f066ca6efd1",
+                "4250a486-3a85-4313-96ea-a508a45945a6",
+                "e5355ba4-b61b-4158-b4c6-483e9537c52d",
+                "cc68a10f-3fb1-4016-b56c-cdf8226a3512",
+                "849e9aea-54cc-4449-b9c3-095b53803bea",
+                "b4f4ebaa-54cc-42d5-a632-c7b0e3f34b5b",
+                "7cc67da2-563b-453b-8b3a-b3fdc82c079c",
+                "77aa2c86-67bd-48f9-be99-6b4c86a74e14",
+                "f32ec0f2-1213-4bd5-96fd-e923c778d2b9"
+              ],
+              "schemaId": "1f4e3697-52bc-45d9-a7a8-65862c13ce4b",
+              "schemaName": "carousel"
+            }
+          ]
+        },
+        "unit": {
+          "en": {
+            "locations": [],
+            "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
+            "schemaName": "unit",
+            "short": "Une centaines d\u0027oeuvres s\u00E9lectionn\u00E9es par une quinzaine d\u0027artistes",
+            "tags": [
+              "accueil",
+              "programmation",
+              "p\u00E9riode"
+            ],
+            "temporal": [
+              {
+                "date": "2025-12-17T00:00:00Z",
+                "datetime": null,
+                "description": ""
+              },
+              {
+                "date": "2026-01-17T00:00:00Z",
+                "datetime": null,
+                "description": ""
+              }
+            ],
+            "text": "\u003Cp\u003EEx\u00ADpo\u00ADsi\u00ADtion annuelle de vente de mul\u00ADtiples, des\u00ADsins et \u00E9di\u00ADtions \u00E0 \u00C9CHOTONE. Des propositions artistiques vendues sans commission avec 100% de vos achats vers\u00E9s aux artistes.\u003Cbr\u003EUne exposition du mercredi 17 d\u00E9cembre 2025 au 17 janvier 2026\u003Cbr\u003EOuvert de 11h \u00E0 17h les sa\u00ADme\u00ADdis et de 14h \u00E0 17h les vendredis (hors vacances scolaires).\u003C/p\u003E\u003Cp\u003EAvec les \u0153uvres de \u003Cstrong\u003EGeoffrey Badel\u003C/strong\u003E, \u003Cstrong\u003EFrank\u00ADlin Bault, Camille Bourdiol, Phi\u00ADlippe Brie\u0300re\u003C/strong\u003E, la mai\u00ADson d\u2019e\u0301\u00ADdi\u00ADtion ni\u0302\u00ADmoise, \u003Cstrong\u003EBook of me \u003C/strong\u003Eavec \u003Cstrong\u003EAnai\u0308s Ro\u00ADber\u00ADtou \u003C/strong\u003E\u0026amp;\u003Cstrong\u003E Else Be\u00ADdoux\u003C/strong\u003E, \u003Cstrong\u003EDo\u00ADro\u00ADta Bucz\u00ADkows\u00ADka\u003C/strong\u003E, \u003Cstrong\u003ECe\u0301\u00ADline Cour\u00ADtault Ca\u00ADpe\u00ADlier\u003C/strong\u003E, \u003Cstrong\u003EAgne\u0300s For\u00ADnells\u003C/strong\u003E, \u003Cstrong\u003ERodolphe Huguet\u003C/strong\u003E, \u003Cstrong\u003E\u00C9lisabeth Keh Chalas\u003C/strong\u003E, \u003Cstrong\u003ER\u00E9becca Konforti\u003C/strong\u003E, \u003Cstrong\u003ELucie Martin\u003C/strong\u003E, \u003Cstrong\u003ERomain Ruiz-Pacouret\u003C/strong\u003E, \u003Cstrong\u003EGwen\u00ADdo\u00ADline Sa\u00ADmi\u00ADdoust, Maxime Touratier\u003C/strong\u003E, \u003Cstrong\u003EChlo\u00E9 Viton\u003C/strong\u003E, le N.U collectif avec les pi\u00E8ces de \u003Cstrong\u003EBololipsum\u003C/strong\u003E, \u003Cstrong\u003EAxelle Carruzzo\u003C/strong\u003E, \u003Cstrong\u003EAur\u00E9lie Piau\u003C/strong\u003E \u0026amp; \u003Cstrong\u003EAnton Sk\u00EDa\u003C/strong\u003E.\u003C/p\u003E",
+            "title": "\u00C9CHOMARKET, exposition"
+          },
+          "fr": {
+            "locations": [],
+            "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
+            "schemaName": "unit",
+            "short": "Une centaines d\u0027oeuvres s\u00E9lectionn\u00E9es par une quinzaine d\u0027artistes",
+            "tags": [
+              "accueil",
+              "programmation",
+              "p\u00E9riode"
+            ],
+            "temporal": [
+              {
+                "date": "2025-12-17T00:00:00Z",
+                "datetime": null,
+                "description": ""
+              },
+              {
+                "date": "2026-01-17T00:00:00Z",
+                "datetime": null,
+                "description": ""
+              }
+            ],
+            "text": "\u003Cp\u003EEx\u00ADpo\u00ADsi\u00ADtion annuelle de vente de mul\u00ADtiples, des\u00ADsins et \u00E9di\u00ADtions \u00E0 \u00C9CHOTONE. Des propositions artistiques vendues sans commission avec 100% de vos achats vers\u00E9s aux artistes.\u003Cbr\u003EUne exposition du mercredi 17 d\u00E9cembre 2025 au 17 janvier 2026\u003Cbr\u003EOuvert de 11h \u00E0 17h les sa\u00ADme\u00ADdis et de 14h \u00E0 17h les vendredis (hors vacances scolaires).\u003C/p\u003E\u003Cp\u003EAvec les \u0153uvres de \u003Cstrong\u003EGeoffrey Badel\u003C/strong\u003E, \u003Cstrong\u003EFrank\u00ADlin Bault, Camille Bourdiol, Phi\u00ADlippe Brie\u0300re\u003C/strong\u003E, la mai\u00ADson d\u2019e\u0301\u00ADdi\u00ADtion ni\u0302\u00ADmoise, \u003Cstrong\u003EBook of me \u003C/strong\u003Eavec \u003Cstrong\u003EAnai\u0308s Ro\u00ADber\u00ADtou \u003C/strong\u003E\u0026amp;\u003Cstrong\u003E Else Be\u00ADdoux\u003C/strong\u003E, \u003Cstrong\u003EDo\u00ADro\u00ADta Bucz\u00ADkows\u00ADka\u003C/strong\u003E, \u003Cstrong\u003ECe\u0301\u00ADline Cour\u00ADtault Ca\u00ADpe\u00ADlier\u003C/strong\u003E, \u003Cstrong\u003EAgne\u0300s For\u00ADnells\u003C/strong\u003E, \u003Cstrong\u003ERodolphe Huguet\u003C/strong\u003E, \u003Cstrong\u003E\u00C9lisabeth Keh Chalas\u003C/strong\u003E, \u003Cstrong\u003ER\u00E9becca Konforti\u003C/strong\u003E, \u003Cstrong\u003ELucie Martin\u003C/strong\u003E, \u003Cstrong\u003ERomain Ruiz-Pacouret\u003C/strong\u003E, \u003Cstrong\u003EGwen\u00ADdo\u00ADline Sa\u00ADmi\u00ADdoust, Maxime Touratier\u003C/strong\u003E, \u003Cstrong\u003EChlo\u00E9 Viton\u003C/strong\u003E, le N.U collectif avec les pi\u00E8ces de \u003Cstrong\u003EBololipsum\u003C/strong\u003E, \u003Cstrong\u003EAxelle Carruzzo\u003C/strong\u003E, \u003Cstrong\u003EAur\u00E9lie Piau\u003C/strong\u003E \u0026amp; \u003Cstrong\u003EAnton Sk\u00EDa\u003C/strong\u003E.\u003C/p\u003E",
+            "title": "\u00C9CHOMARKET, exposition"
+          }
+        }
+      },
+      "editToken": "eyJhIjoiZWNob3RvbmUiLCJzIjoicGFnZSIsImkiOiJlMzBhMjc0OC0zMTE2LTQ2MDQtODMxNS0xODM3YTliYjJjZDYiLCJ1IjoiaHR0cHM6Ly9sYWFiLmRkbnMubmV0OjM4MDgwLyJ9",
+      "id": "e30a2748-3116-4604-8315-1837a9bb2cd6",
+      "isDeleted": false,
+      "lastModified": "2026-01-08T11:03:09Z",
+      "lastModifiedBy": "subject:6798df7c5b784ee7b7cb52e1",
+      "schemaDisplayName": "Page",
+      "schemaId": "d0379b0e-294e-4df6-9b2b-257b807b1467",
+      "schemaName": "page",
+      "status": "Published",
+      "statusColor": "#4bb958",
+      "version": 23
+    },
+    {
+      "_links": {
+        "delete": {
           "href": "/api/content/echotone/page/118d807b-25ca-4aeb-9c74-c374ffad217b",
           "method": "DELETE"
         },
@@ -25,7 +351,7 @@
           "method": "POST"
         },
         "previous": {
-          "href": "/api/content/echotone/page/118d807b-25ca-4aeb-9c74-c374ffad217b/4",
+          "href": "/api/content/echotone/page/118d807b-25ca-4aeb-9c74-c374ffad217b/11",
           "method": "GET"
         },
         "self": {
@@ -47,7 +373,17 @@
               "inslides": null,
               "medias": [
                 "844c4402-6201-487b-9a6f-e0c676652bef",
-                "4ea29127-2364-48ce-b938-4ebfca6b61d2"
+                "4ea29127-2364-48ce-b938-4ebfca6b61d2",
+                "2d5acdf0-6f47-478d-985b-3fb99adf9f4b",
+                "d7cb7aee-4eae-4c5b-adb1-8d2ff5fc0fe3",
+                "2887ee3e-2d34-4ddb-8408-8bc2bc49d13f",
+                "f80c4dcd-25d5-4ecc-89f2-e15020f520d8",
+                "3168d85a-4f6a-45cc-9ca8-9b06766dbf03",
+                "8606bf1d-de5a-43ea-9530-5b1f01603a0f",
+                "dc22e876-5e88-49c2-9a3c-8c1139aebeb2",
+                "ef50a4bb-c240-49ba-8724-d2b851a608d0",
+                "3683c5fb-0ac0-4872-bc1d-bf43ef43b094",
+                "73b3084e-d01d-4b82-aa0f-7ef49c7ef57d"
               ],
               "schemaId": "1f4e3697-52bc-45d9-a7a8-65862c13ce4b",
               "schemaName": "carousel"
@@ -67,21 +403,21 @@
             "temporal": [
               {
                 "date": null,
-                "datetime": "2025-12-13T09:00:00Z",
-                "description": null
-              },
-              {
-                "date": null,
-                "datetime": "2025-12-11T09:00:00Z",
-                "description": null
+                "datetime": "2025-12-11T13:00:00Z",
+                "description": ""
               },
               {
                 "date": null,
                 "datetime": "2025-12-12T09:00:00Z",
-                "description": null
+                "description": ""
+              },
+              {
+                "date": null,
+                "datetime": "2025-12-13T09:00:00Z",
+                "description": ""
               }
             ],
-            "text": "\u003Cp\u003E\u00C9CHOTONE participe les 11, 12 \u0026amp; 13 d\u00E9cembre prochain \u00E0 \u003Cstrong\u003E\u003Cem\u003EPublicare\u003C/em\u003E, Festival du multiple, de l\u2019\u00E9dition d\u2019artiste et de la micro\u00E9dition\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ECette premi\u00E8re \u00E9dition coordonn\u00E9 par Carr\u00E9 d\u2019Art \u2013 Mus\u00E9e d\u2019art contemporain, en partenariat avec le r\u00E9seau des biblioth\u00E8ques de N\u00EEmes et l\u2019\u00E9cole sup\u00E9rieure des Beaux-arts de N\u00EEmes invite les acteurs de l\u2019\u00E9dition du territoire, \u00E0 valoriser l\u2019\u00E9cosyst\u00E8me local et explorer les liens entre l\u2019art et l\u2019\u00E9dition. Les 28 structures \u00E9ditrices pr\u00E9sentes pendant le festival vous proposent une s\u00E9lection de livres d\u2019artistes, multiples, s\u00E9rigraphies, que vous pourrez d\u00E9couvrir dans le hall de Carr\u00E9 d\u2019Art.\u003Cbr\u003ECe festival est rythm\u00E9 par des rencontres avec les artistes, des lectures, activations et ateliers pour tous les publics. Ces rendez-vous sont accessibles sans r\u00E9servation, dans la limite des places disponibles.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EArtistes et pi\u00E8ces pr\u00E9sent\u00E9es par \u00C9CHOTONE\u003Cbr\u003E\u003C/strong\u003E\u003Cem\u003EAkousma, Partie II\u003C/em\u003E , \u00E9dition d\u0027artiste de \u003Cstrong\u003EGEOFFREY BADEL\u003C/strong\u003E, \u003Cem\u003EZER\u019F T\u019FNER editions, \u003C/em\u003Emultiples de \u003Cstrong\u003EPHILIPPE BRI\u00C8RE, \u003C/strong\u003E\u003Cem\u003EMoires, \u003C/em\u003E\u00E9dition d\u0027artiste de \u003Cstrong\u003ER\u00C9BECCA KONFORTI\u003C/strong\u003E, \u003Cem\u003EUntitled Garden, \u003C/em\u003Edessins - photocopi\u00E9 \u00E0 la main - de \u003Cstrong\u003EROMAIN RUIZ-PACOURET, \u003C/strong\u003E\u003Cem\u003EREVOLUTION, \u003C/em\u003Eaffiche de \u003Cstrong\u003EMAXIME TOURATIER\u003C/strong\u003E et \u003Cem\u003EMidnight blue Limestones (Magn\u00E9sium), \u003C/em\u003Ephotographies de \u003Cstrong\u003ECHLO\u00C9 VITON. \u003Cbr\u003E\u003C/strong\u003EAfin de valoriser les savoirs-faire de nos ateliers nous pr\u00E9senterons \u00E9galement, \u003Cem\u003EDahlia\u003C/em\u003E, lumen print de \u003Cstrong\u003EC\u00C9LINE COURTAULT CAPELIER\u003C/strong\u003E, \u003Cem\u003ECoquelicots\u003C/em\u003E, photogravures sur nappe chauffante de \u003Cstrong\u003ESABRINA ISSA\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EOuvertures et pr\u00E9sences des artistes : \u003Cbr\u003E\u003C/strong\u003EJeudi 11 d\u00E9cembre 2025\u0026nbsp;: 14h-19h, \u003Cstrong\u003EPHILIPPE BRI\u00C8RE\u003C/strong\u003E pr\u00E9sent \u00E0 partir de 14h30\u003Cbr\u003EVendredi 12 d\u00E9cembre 2025\u0026nbsp;: 10h-20h\u003Cbr\u003ESamedi 13 d\u00E9cembre 2025\u0026nbsp;: 10h-18h30, \u003Cstrong\u003EGEOFFREY BADEL \u003C/strong\u003Eet\u003Cstrong\u003E CHLO\u00C9 VITON \u003C/strong\u003Etoute la journ\u00E9e\u003C/p\u003E\u003Cp\u003E\u0026gt; \u003Ca target=\u0022_blank\u0022 href=\u0022https://www.carreartmusee.com/fichier/p_media/3111/media_fichier_programme_publicare.edition.zero_vf_sans.marge.pdf\u0022 rel=\u0022noopener noreferrer nofollow\u0022\u003ELien vers le programme\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EListe des participants :\u003Cbr\u003E\u003C/strong\u003EAAMAC - Association des Amis du mus\u00E9e des Beaux-Arts et mus\u00E9e d\u2019art contemporain.\u003Cbr\u003EAtelier reliure XXI \u2013 La Bande \u00E0 Ren\u00E9\u003Cbr\u003EBobazar, association des \u00E9tudiant\u00B7es de l\u2019\u00E9sban\u003Cbr\u003EBook of me\u003Cbr\u003ECACN \u2013 Centre d\u2019art contemporain de N\u00EEmes\u003Cbr\u003ECarr\u00E9 d\u2019Art \u2013 Mus\u00E9e d\u2019art contemporain de N\u00EEmes\u003Cbr\u003ECollectif Bourrage papier \u2013 association \u00E9tudiante N\u00EEmes Universit\u00E9\u003Cbr\u003ECopie Machine\u003Cbr\u003E\u00C9chotone\u003Cbr\u003EEdit \u0026amp; P0llux\u003Cbr\u003EEditions de La Margeride\u003Cbr\u003EEditions silo\u003Cbr\u003E\u00E9sban / \u00E9cole sup\u00E9rieure des Beaux-arts de N\u00EEmes\u003Cbr\u003E\u00C9tant donn\u00E9\u003Cbr\u003EImm\u00E9diats - Publications pour l\u2019art contemporain\u003Cbr\u003ELaurent Pichaud x-sud art/site\u0026nbsp;\u0026nbsp;\u003Cbr\u003ELe r\u00E9seau des biblioth\u00E8ques de N\u00EEmes\u003Cbr\u003ELes Eveilleuses\u003Cbr\u003ELibrairie Carr\u00E9 d\u2019Art\u003Cbr\u003EMaster HIC \u2013 Humanit\u00E9s et industries cr\u00E9atives, N\u00EEmes Universit\u00E9\u003Cbr\u003EMus\u00E9e-biblioth\u00E8que Pierre Andr\u00E9 Benoit, Al\u00E8s\u003Cbr\u003EN\u00EEmes Universit\u00E9\u003Cbr\u003ENegPos \u2013 Centre d\u2019art et de photographie de N\u00EEmes\u003Cbr\u003EPamela Artist - Run Space\u003Cbr\u003EPapiers coup\u00E9s\u003Cbr\u003ERevue Vinaigrette\u003Cbr\u003ERIGA\u003Cbr\u003ERoblocado\u003C/p\u003E",
+            "text": "\u003Cp\u003E\u00C9CHOTONE participe les 11, 12 \u0026amp; 13 d\u00E9cembre prochain \u00E0 \u003Cstrong\u003E\u003Cem\u003EPublicare\u003C/em\u003E, Festival du multiple, de l\u2019\u00E9dition d\u2019artiste et de la micro\u00E9dition\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ECette premi\u00E8re \u00E9dition coordonn\u00E9 par Carr\u00E9 d\u2019Art \u2013 Mus\u00E9e d\u2019art contemporain, en partenariat avec le r\u00E9seau des biblioth\u00E8ques de N\u00EEmes et l\u2019\u00E9cole sup\u00E9rieure des Beaux-arts de N\u00EEmes invite les acteurs de l\u2019\u00E9dition du territoire, \u00E0 valoriser l\u2019\u00E9cosyst\u00E8me local et explorer les liens entre l\u2019art et l\u2019\u00E9dition. Les 28 structures \u00E9ditrices pr\u00E9sentes pendant le festival vous proposent une s\u00E9lection de livres d\u2019artistes, multiples, s\u00E9rigraphies, que vous pourrez d\u00E9couvrir dans le hall de Carr\u00E9 d\u2019Art.\u003Cbr\u003ECe festival est rythm\u00E9 par des rencontres avec les artistes, des lectures, activations et ateliers pour tous les publics. Ces rendez-vous sont accessibles sans r\u00E9servation, dans la limite des places disponibles.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EArtistes et pi\u00E8ces pr\u00E9sent\u00E9es par \u00C9CHOTONE\u003Cbr\u003E\u003C/strong\u003E\u003Cem\u003EAkousma, Partie II\u003C/em\u003E , \u00E9dition d\u0027artiste de \u003Cstrong\u003EGEOFFREY BADEL\u003C/strong\u003E, \u003Cem\u003EZER\u019F T\u019FNER editions, \u003C/em\u003Emultiples de \u003Cstrong\u003EPHILIPPE BRI\u00C8RE, \u003C/strong\u003E\u003Cem\u003EMoires, \u003C/em\u003E\u00E9dition d\u0027artiste de \u003Cstrong\u003ER\u00C9BECCA KONFORTI\u003C/strong\u003E, \u003Cem\u003EUntitled Garden, \u003C/em\u003Edessins - photocopi\u00E9 \u00E0 la main - de \u003Cstrong\u003EROMAIN RUIZ-PACOURET, \u003C/strong\u003E\u003Cem\u003EREVOLUTION, \u003C/em\u003Eaffiche de \u003Cstrong\u003EMAXIME TOURATIER\u003C/strong\u003E et \u003Cem\u003EMidnight blue Limestones (Magn\u00E9sium), \u003C/em\u003Ephotographies de \u003Cstrong\u003ECHLO\u00C9 VITON. \u003Cbr\u003E\u003C/strong\u003EAfin de valoriser les savoirs-faire de nos ateliers nous pr\u00E9senterons \u00E9galement, \u003Cem\u003EDahlia\u003C/em\u003E, lumen print de \u003Cstrong\u003EC\u00C9LINE COURTAULT CAPELIER\u003C/strong\u003E, \u003Cem\u003ECoquelicots\u003C/em\u003E, photogravures sur nappe chauffante de \u003Cstrong\u003ESABRINA ISSA\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EOuvertures et pr\u00E9sences des artistes : \u003Cbr\u003E\u003C/strong\u003EJeudi 11 d\u00E9cembre 2025\u0026nbsp;: 14h-19h\u003Cbr\u003EVendredi 12 d\u00E9cembre 2025\u0026nbsp;: 10h-20h, \u003Cstrong\u003EPHILIPPE BRI\u00C8RE\u003C/strong\u003E\u003Cbr\u003ESamedi 13 d\u00E9cembre 2025\u0026nbsp;: 10h-18h30, \u003Cstrong\u003EGEOFFREY BADEL, CHLO\u00C9 VITON et PHILIPPE BRI\u00C8RE \u003C/strong\u003E\u003C/p\u003E\u003Cp\u003E\u003Ca target=\u0022_blank\u0022 href=\u0022https://www.carreartmusee.com/fichier/p_media/3111/media_fichier_programme_publicare.edition.zero_vf_sans.marge.pdf\u0022 rel=\u0022noopener noreferrer nofollow\u0022\u003E\u003Cu\u003E\u0026gt; Lien vers le programme\u003C/u\u003E\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EListe des participants :\u003Cbr\u003E\u003C/strong\u003EAAMAC - Association des Amis du mus\u00E9e des Beaux-Arts et mus\u00E9e d\u2019art contemporain.\u003Cbr\u003EAtelier reliure XXI \u2013 La Bande \u00E0 Ren\u00E9\u003Cbr\u003EBobazar, association des \u00E9tudiant\u00B7es de l\u2019\u00E9sban\u003Cbr\u003EBook of me\u003Cbr\u003ECACN \u2013 Centre d\u2019art contemporain de N\u00EEmes\u003Cbr\u003ECarr\u00E9 d\u2019Art \u2013 Mus\u00E9e d\u2019art contemporain de N\u00EEmes\u003Cbr\u003ECollectif Bourrage papier \u2013 association \u00E9tudiante N\u00EEmes Universit\u00E9\u003Cbr\u003ECopie Machine\u003Cbr\u003E\u00C9chotone\u003Cbr\u003EEdit \u0026amp; P0llux\u003Cbr\u003EEditions de La Margeride\u003Cbr\u003EEditions silo\u003Cbr\u003E\u00E9sban / \u00E9cole sup\u00E9rieure des Beaux-arts de N\u00EEmes\u003Cbr\u003E\u00C9tant donn\u00E9\u003Cbr\u003EImm\u00E9diats - Publications pour l\u2019art contemporain\u003Cbr\u003ELaurent Pichaud x-sud art/site\u0026nbsp;\u0026nbsp;\u003Cbr\u003ELe r\u00E9seau des biblioth\u00E8ques de N\u00EEmes\u003Cbr\u003ELes Eveilleuses\u003Cbr\u003ELibrairie Carr\u00E9 d\u2019Art\u003Cbr\u003EMaster HIC \u2013 Humanit\u00E9s et industries cr\u00E9atives, N\u00EEmes Universit\u00E9\u003Cbr\u003EMus\u00E9e-biblioth\u00E8que Pierre Andr\u00E9 Benoit, Al\u00E8s\u003Cbr\u003EN\u00EEmes Universit\u00E9\u003Cbr\u003ENegPos \u2013 Centre d\u2019art et de photographie de N\u00EEmes\u003Cbr\u003EPamela Artist - Run Space\u003Cbr\u003EPapiers coup\u00E9s\u003Cbr\u003ERevue Vinaigrette\u003Cbr\u003ERIGA\u003Cbr\u003ERoblocado\u003C/p\u003E",
             "title": "PUBLICARE, au Carr\u00E9 d\u0027Art \u00E0 N\u00EEmes"
           },
           "fr": {
@@ -96,21 +432,21 @@
             "temporal": [
               {
                 "date": null,
-                "datetime": "2025-12-13T09:00:00Z",
-                "description": null
-              },
-              {
-                "date": null,
-                "datetime": "2025-12-11T09:00:00Z",
-                "description": null
+                "datetime": "2025-12-11T13:00:00Z",
+                "description": ""
               },
               {
                 "date": null,
                 "datetime": "2025-12-12T09:00:00Z",
-                "description": null
+                "description": ""
+              },
+              {
+                "date": null,
+                "datetime": "2025-12-13T09:00:00Z",
+                "description": ""
               }
             ],
-            "text": "\u003Cp\u003E\u00C9CHOTONE participe les 11, 12 \u0026amp; 13 d\u00E9cembre prochain \u00E0 \u003Cstrong\u003E\u003Cem\u003EPublicare\u003C/em\u003E, Festival du multiple, de l\u2019\u00E9dition d\u2019artiste et de la micro\u00E9dition\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ECette premi\u00E8re \u00E9dition coordonn\u00E9 par Carr\u00E9 d\u2019Art \u2013 Mus\u00E9e d\u2019art contemporain, en partenariat avec le r\u00E9seau des biblioth\u00E8ques de N\u00EEmes et l\u2019\u00E9cole sup\u00E9rieure des Beaux-arts de N\u00EEmes invite les acteurs de l\u2019\u00E9dition du territoire, \u00E0 valoriser l\u2019\u00E9cosyst\u00E8me local et explorer les liens entre l\u2019art et l\u2019\u00E9dition. Les 28 structures \u00E9ditrices pr\u00E9sentes pendant le festival vous proposent une s\u00E9lection de livres d\u2019artistes, multiples, s\u00E9rigraphies, que vous pourrez d\u00E9couvrir dans le hall de Carr\u00E9 d\u2019Art.\u003Cbr\u003ECe festival est rythm\u00E9 par des rencontres avec les artistes, des lectures, activations et ateliers pour tous les publics. Ces rendez-vous sont accessibles sans r\u00E9servation, dans la limite des places disponibles.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EArtistes et pi\u00E8ces pr\u00E9sent\u00E9es par \u00C9CHOTONE\u003Cbr\u003E\u003C/strong\u003E\u003Cem\u003EAkousma, Partie II\u003C/em\u003E , \u00E9dition d\u0027artiste de \u003Cstrong\u003EGEOFFREY BADEL\u003C/strong\u003E, \u003Cem\u003EZER\u019F T\u019FNER editions, \u003C/em\u003Emultiples de \u003Cstrong\u003EPHILIPPE BRI\u00C8RE, \u003C/strong\u003E\u003Cem\u003EMoires, \u003C/em\u003E\u00E9dition d\u0027artiste de \u003Cstrong\u003ER\u00C9BECCA KONFORTI\u003C/strong\u003E, \u003Cem\u003EUntitled Garden, \u003C/em\u003Edessins - photocopi\u00E9 \u00E0 la main - de \u003Cstrong\u003EROMAIN RUIZ-PACOURET, \u003C/strong\u003E\u003Cem\u003EREVOLUTION, \u003C/em\u003Eaffiche de \u003Cstrong\u003EMAXIME TOURATIER\u003C/strong\u003E et \u003Cem\u003EMidnight blue Limestones (Magn\u00E9sium), \u003C/em\u003Ephotographies de \u003Cstrong\u003ECHLO\u00C9 VITON. \u003Cbr\u003E\u003C/strong\u003EAfin de valoriser les savoirs-faire de nos ateliers nous pr\u00E9senterons \u00E9galement, \u003Cem\u003EDahlia\u003C/em\u003E, lumen print de \u003Cstrong\u003EC\u00C9LINE COURTAULT CAPELIER\u003C/strong\u003E, \u003Cem\u003ECoquelicots\u003C/em\u003E, photogravures sur nappe chauffante de \u003Cstrong\u003ESABRINA ISSA\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EOuvertures et pr\u00E9sences des artistes : \u003Cbr\u003E\u003C/strong\u003EJeudi 11 d\u00E9cembre 2025\u0026nbsp;: 14h-19h, \u003Cstrong\u003EPHILIPPE BRI\u00C8RE\u003C/strong\u003E pr\u00E9sent \u00E0 partir de 14h30\u003Cbr\u003EVendredi 12 d\u00E9cembre 2025\u0026nbsp;: 10h-20h\u003Cbr\u003ESamedi 13 d\u00E9cembre 2025\u0026nbsp;: 10h-18h30, \u003Cstrong\u003EGEOFFREY BADEL \u003C/strong\u003Eet\u003Cstrong\u003E CHLO\u00C9 VITON \u003C/strong\u003Etoute la journ\u00E9e\u003C/p\u003E\u003Cp\u003E\u0026gt; \u003Ca target=\u0022_blank\u0022 href=\u0022https://www.carreartmusee.com/fichier/p_media/3111/media_fichier_programme_publicare.edition.zero_vf_sans.marge.pdf\u0022 rel=\u0022noopener noreferrer nofollow\u0022\u003ELien vers le programme\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EListe des participants :\u003Cbr\u003E\u003C/strong\u003EAAMAC - Association des Amis du mus\u00E9e des Beaux-Arts et mus\u00E9e d\u2019art contemporain.\u003Cbr\u003EAtelier reliure XXI \u2013 La Bande \u00E0 Ren\u00E9\u003Cbr\u003EBobazar, association des \u00E9tudiant\u00B7es de l\u2019\u00E9sban\u003Cbr\u003EBook of me\u003Cbr\u003ECACN \u2013 Centre d\u2019art contemporain de N\u00EEmes\u003Cbr\u003ECarr\u00E9 d\u2019Art \u2013 Mus\u00E9e d\u2019art contemporain de N\u00EEmes\u003Cbr\u003ECollectif Bourrage papier \u2013 association \u00E9tudiante N\u00EEmes Universit\u00E9\u003Cbr\u003ECopie Machine\u003Cbr\u003E\u00C9chotone\u003Cbr\u003EEdit \u0026amp; P0llux\u003Cbr\u003EEditions de La Margeride\u003Cbr\u003EEditions silo\u003Cbr\u003E\u00E9sban / \u00E9cole sup\u00E9rieure des Beaux-arts de N\u00EEmes\u003Cbr\u003E\u00C9tant donn\u00E9\u003Cbr\u003EImm\u00E9diats - Publications pour l\u2019art contemporain\u003Cbr\u003ELaurent Pichaud x-sud art/site\u0026nbsp;\u0026nbsp;\u003Cbr\u003ELe r\u00E9seau des biblioth\u00E8ques de N\u00EEmes\u003Cbr\u003ELes Eveilleuses\u003Cbr\u003ELibrairie Carr\u00E9 d\u2019Art\u003Cbr\u003EMaster HIC \u2013 Humanit\u00E9s et industries cr\u00E9atives, N\u00EEmes Universit\u00E9\u003Cbr\u003EMus\u00E9e-biblioth\u00E8que Pierre Andr\u00E9 Benoit, Al\u00E8s\u003Cbr\u003EN\u00EEmes Universit\u00E9\u003Cbr\u003ENegPos \u2013 Centre d\u2019art et de photographie de N\u00EEmes\u003Cbr\u003EPamela Artist - Run Space\u003Cbr\u003EPapiers coup\u00E9s\u003Cbr\u003ERevue Vinaigrette\u003Cbr\u003ERIGA\u003Cbr\u003ERoblocado\u003C/p\u003E",
+            "text": "\u003Cp\u003E\u00C9CHOTONE participe les 11, 12 \u0026amp; 13 d\u00E9cembre prochain \u00E0 \u003Cstrong\u003E\u003Cem\u003EPublicare\u003C/em\u003E, Festival du multiple, de l\u2019\u00E9dition d\u2019artiste et de la micro\u00E9dition\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003ECette premi\u00E8re \u00E9dition coordonn\u00E9 par Carr\u00E9 d\u2019Art \u2013 Mus\u00E9e d\u2019art contemporain, en partenariat avec le r\u00E9seau des biblioth\u00E8ques de N\u00EEmes et l\u2019\u00E9cole sup\u00E9rieure des Beaux-arts de N\u00EEmes invite les acteurs de l\u2019\u00E9dition du territoire, \u00E0 valoriser l\u2019\u00E9cosyst\u00E8me local et explorer les liens entre l\u2019art et l\u2019\u00E9dition. Les 28 structures \u00E9ditrices pr\u00E9sentes pendant le festival vous proposent une s\u00E9lection de livres d\u2019artistes, multiples, s\u00E9rigraphies, que vous pourrez d\u00E9couvrir dans le hall de Carr\u00E9 d\u2019Art.\u003Cbr\u003ECe festival est rythm\u00E9 par des rencontres avec les artistes, des lectures, activations et ateliers pour tous les publics. Ces rendez-vous sont accessibles sans r\u00E9servation, dans la limite des places disponibles.\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EArtistes et pi\u00E8ces pr\u00E9sent\u00E9es par \u00C9CHOTONE\u003Cbr\u003E\u003C/strong\u003E\u003Cem\u003EAkousma, Partie II\u003C/em\u003E , \u00E9dition d\u0027artiste de \u003Cstrong\u003EGEOFFREY BADEL\u003C/strong\u003E, \u003Cem\u003EZER\u019F T\u019FNER editions, \u003C/em\u003Emultiples de \u003Cstrong\u003EPHILIPPE BRI\u00C8RE, \u003C/strong\u003E\u003Cem\u003EMoires, \u003C/em\u003E\u00E9dition d\u0027artiste de \u003Cstrong\u003ER\u00C9BECCA KONFORTI\u003C/strong\u003E, \u003Cem\u003EUntitled Garden, \u003C/em\u003Edessins - photocopi\u00E9 \u00E0 la main - de \u003Cstrong\u003EROMAIN RUIZ-PACOURET, \u003C/strong\u003E\u003Cem\u003EREVOLUTION, \u003C/em\u003Eaffiche de \u003Cstrong\u003EMAXIME TOURATIER\u003C/strong\u003E et \u003Cem\u003EMidnight blue Limestones (Magn\u00E9sium), \u003C/em\u003Ephotographies de \u003Cstrong\u003ECHLO\u00C9 VITON. \u003Cbr\u003E\u003C/strong\u003EAfin de valoriser les savoirs-faire de nos ateliers nous pr\u00E9senterons \u00E9galement, \u003Cem\u003EDahlia\u003C/em\u003E, lumen print de \u003Cstrong\u003EC\u00C9LINE COURTAULT CAPELIER\u003C/strong\u003E, \u003Cem\u003ECoquelicots\u003C/em\u003E, photogravures sur nappe chauffante de \u003Cstrong\u003ESABRINA ISSA\u003C/strong\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EOuvertures et pr\u00E9sences des artistes : \u003Cbr\u003E\u003C/strong\u003EJeudi 11 d\u00E9cembre 2025\u0026nbsp;: 14h-19h\u003Cbr\u003EVendredi 12 d\u00E9cembre 2025\u0026nbsp;: 10h-20h, \u003Cstrong\u003EPHILIPPE BRI\u00C8RE\u003C/strong\u003E\u003Cbr\u003ESamedi 13 d\u00E9cembre 2025\u0026nbsp;: 10h-18h30, \u003Cstrong\u003EGEOFFREY BADEL, CHLO\u00C9 VITON et PHILIPPE BRI\u00C8RE \u003C/strong\u003E\u003C/p\u003E\u003Cp\u003E\u003Ca target=\u0022_blank\u0022 href=\u0022https://www.carreartmusee.com/fichier/p_media/3111/media_fichier_programme_publicare.edition.zero_vf_sans.marge.pdf\u0022 rel=\u0022noopener noreferrer nofollow\u0022\u003E\u003Cu\u003E\u0026gt; Lien vers le programme\u003C/u\u003E\u003C/a\u003E\u003C/p\u003E\u003Cp\u003E\u003Cstrong\u003EListe des participants :\u003Cbr\u003E\u003C/strong\u003EAAMAC - Association des Amis du mus\u00E9e des Beaux-Arts et mus\u00E9e d\u2019art contemporain.\u003Cbr\u003EAtelier reliure XXI \u2013 La Bande \u00E0 Ren\u00E9\u003Cbr\u003EBobazar, association des \u00E9tudiant\u00B7es de l\u2019\u00E9sban\u003Cbr\u003EBook of me\u003Cbr\u003ECACN \u2013 Centre d\u2019art contemporain de N\u00EEmes\u003Cbr\u003ECarr\u00E9 d\u2019Art \u2013 Mus\u00E9e d\u2019art contemporain de N\u00EEmes\u003Cbr\u003ECollectif Bourrage papier \u2013 association \u00E9tudiante N\u00EEmes Universit\u00E9\u003Cbr\u003ECopie Machine\u003Cbr\u003E\u00C9chotone\u003Cbr\u003EEdit \u0026amp; P0llux\u003Cbr\u003EEditions de La Margeride\u003Cbr\u003EEditions silo\u003Cbr\u003E\u00E9sban / \u00E9cole sup\u00E9rieure des Beaux-arts de N\u00EEmes\u003Cbr\u003E\u00C9tant donn\u00E9\u003Cbr\u003EImm\u00E9diats - Publications pour l\u2019art contemporain\u003Cbr\u003ELaurent Pichaud x-sud art/site\u0026nbsp;\u0026nbsp;\u003Cbr\u003ELe r\u00E9seau des biblioth\u00E8ques de N\u00EEmes\u003Cbr\u003ELes Eveilleuses\u003Cbr\u003ELibrairie Carr\u00E9 d\u2019Art\u003Cbr\u003EMaster HIC \u2013 Humanit\u00E9s et industries cr\u00E9atives, N\u00EEmes Universit\u00E9\u003Cbr\u003EMus\u00E9e-biblioth\u00E8que Pierre Andr\u00E9 Benoit, Al\u00E8s\u003Cbr\u003EN\u00EEmes Universit\u00E9\u003Cbr\u003ENegPos \u2013 Centre d\u2019art et de photographie de N\u00EEmes\u003Cbr\u003EPamela Artist - Run Space\u003Cbr\u003EPapiers coup\u00E9s\u003Cbr\u003ERevue Vinaigrette\u003Cbr\u003ERIGA\u003Cbr\u003ERoblocado\u003C/p\u003E",
             "title": "PUBLICARE, au Carr\u00E9 d\u0027Art \u00E0 N\u00EEmes"
           }
         }
@@ -118,39 +454,39 @@
       "editToken": "eyJhIjoiZWNob3RvbmUiLCJzIjoicGFnZSIsImkiOiIxMThkODA3Yi0yNWNhLTRhZWItOWM3NC1jMzc0ZmZhZDIxN2IiLCJ1IjoiaHR0cHM6Ly9sYWFiLmRkbnMubmV0OjM4MDgwLyJ9",
       "id": "118d807b-25ca-4aeb-9c74-c374ffad217b",
       "isDeleted": false,
-      "lastModified": "2025-11-25T00:27:09Z",
-      "lastModifiedBy": "subject:6798dad0167d31fb8ec7cc74",
+      "lastModified": "2025-12-18T19:53:50Z",
+      "lastModifiedBy": "subject:6798df7c5b784ee7b7cb52e1",
       "schemaDisplayName": "Page",
       "schemaId": "d0379b0e-294e-4df6-9b2b-257b807b1467",
       "schemaName": "page",
       "status": "Published",
       "statusColor": "#4bb958",
-      "version": 5
+      "version": 12
     },
     {
       "_links": {
         "delete": {
-          "href": "/api/content/echotone/page/e30a2748-3116-4604-8315-1837a9bb2cd6",
+          "href": "/api/content/echotone/page/cfcb6fdb-2266-4cb1-80f8-3fc2798945d1",
           "method": "DELETE"
         },
         "draft/create": {
-          "href": "/api/content/echotone/page/e30a2748-3116-4604-8315-1837a9bb2cd6/draft",
+          "href": "/api/content/echotone/page/cfcb6fdb-2266-4cb1-80f8-3fc2798945d1/draft",
           "method": "POST"
         },
         "previous": {
-          "href": "/api/content/echotone/page/e30a2748-3116-4604-8315-1837a9bb2cd6/3",
+          "href": "/api/content/echotone/page/cfcb6fdb-2266-4cb1-80f8-3fc2798945d1/1",
           "method": "GET"
         },
         "self": {
-          "href": "/api/content/echotone/page/e30a2748-3116-4604-8315-1837a9bb2cd6",
+          "href": "/api/content/echotone/page/cfcb6fdb-2266-4cb1-80f8-3fc2798945d1",
           "method": "GET"
         }
       },
-      "created": "2025-11-24T15:12:04Z",
+      "created": "2025-12-18T19:24:40Z",
       "createdBy": "subject:6798df7c5b784ee7b7cb52e1",
       "data": {
         "id": {
-          "iv": "echomarket-exposition"
+          "iv": "monotype-et-pigments-vivants"
         },
         "medias": {
           "iv": [
@@ -159,7 +495,9 @@
               "in": true,
               "inslides": null,
               "medias": [
-                "739ef26a-dc53-4daf-b8a2-3b104aa41598"
+                "8189817a-bdff-4004-b1f8-50259c4cffa9",
+                "0821f6ba-976b-4943-a7a2-f42b02347a3e",
+                "c1b23877-7275-477d-af1b-9fc884813811"
               ],
               "schemaId": "1f4e3697-52bc-45d9-a7a8-65862c13ce4b",
               "schemaName": "carousel"
@@ -171,53 +509,55 @@
             "locations": [],
             "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
             "schemaName": "unit",
-            "short": "Une centaines d\u0027oeuvres s\u00E9lectionn\u00E9es par une quinzaine d\u0027artistes",
+            "short": "Des ateliers propos\u00E9s dans le cadre du Calendrier de l\u0027avent de ce d\u00E9c. 2025",
             "tags": [
-              "accueil",
-              "programmation"
+              "atelier",
+              "programmation",
+              "accueil"
             ],
             "temporal": [
               {
                 "date": null,
-                "datetime": "2025-12-17T17:00:00Z",
+                "datetime": "2025-12-19T13:00:00Z",
                 "description": null
               }
             ],
-            "text": "\u003Cp\u003EEx\u00ADpo\u00ADsi\u00ADtion annuelle de vente de mul\u00ADtiples, des\u00ADsins, \u00E9di\u00ADtions \u00E0 \u00C9CHOTONE. Un floril\u00E8ge de propositions artistiques vendues sans commission.\u003Cbr\u003EOU\u00ADVER\u00ADTURES de 11h \u00E0 17h les sa\u00ADme\u00ADdis et de 14h \u00E0 17h les vendredis (hors vacances scolaires).\u003Cbr\u003EEt 7j/7 sur rdv\u003C/p\u003E\u003Cp\u003EAvec les \u0153uvres de \u003Cstrong\u003EFrank\u00ADlin Bault, Phi\u00ADlippe Brie\u0300re\u003C/strong\u003E, la jeune mai\u00ADson d\u2019e\u0301\u00ADdi\u00ADtion ni\u0302\u00ADmoise, \u003Cstrong\u003EBook of me \u003C/strong\u003Eavec \u003Cstrong\u003EAnai\u0308s Ro\u00ADber\u00ADtou, Else Be\u00ADdoux\u003C/strong\u003E, \u003Cstrong\u003EDo\u00ADro\u00ADta Bucz\u00ADkows\u00ADka\u003C/strong\u003E, \u003Cstrong\u003ECe\u0301\u00ADline Cour\u00ADtault Ca\u00ADpe\u00ADlier\u003C/strong\u003E, \u003Cstrong\u003ERodolphe Huguet\u003C/strong\u003E, le N.U collectif avec les pi\u00E8ces de \u003Cstrong\u003EYasmine Blum\u003C/strong\u003E, \u003Cstrong\u003EBololipsum\u003C/strong\u003E, \u003Cstrong\u003EAxelle Carruzzo\u003C/strong\u003E, \u003Cstrong\u003EAur\u00E9lie Piau\u003C/strong\u003E, \u003Cstrong\u003EBertrand Wolff\u003C/strong\u003E et \u003Cstrong\u003EAnton Sk\u00EDa\u003C/strong\u003E, \u003Cstrong\u003EGwen\u00ADdo\u00ADline Sa\u00ADmi\u00ADdoust\u003C/strong\u003E, \u003Cstrong\u003EAgne\u0300s For\u00ADnells\u003C/strong\u003E, , le col\u00ADlec\u00ADtif SOMMES avec \u003Cstrong\u003EJean-Marc De\u00ADmay \u003C/strong\u003Eet \u003Cstrong\u003EVe\u0301\u00ADro\u00ADnique Tuillier\u003C/strong\u003E.\u003C/p\u003E",
-            "title": "\u00C9CHOMARKET, exposition"
+            "text": "\u003Cp\u003EVendredi 19 d\u00E9\u00ADcembre : de 14h a\u0300 17h, deux ac\u00ADti\u00ADvi\u00ADte\u0301s offertes \u00E0 toutes et tous.\u003Cbr\u003EVenez exp\u00E9rimenter la \u003Cstrong\u003Etech\u00ADnique du mo\u00ADno\u00ADtype\u003C/strong\u003E ou d\u00E9couvrir les \u003Cstrong\u003Echangements de couleurs chez les pigments organiques\u003C/strong\u003E \u00E0 \u00C9CHOTONE. \u003Cbr\u003ECet e\u0301\u00ADve\u0301\u00ADne\u00ADment sur\u00ADprise est pro\u00ADpo\u00ADse\u0301 dans le cadre du ca\u00ADlen\u00ADdrier de l\u2019avent or\u00ADga\u00ADni\u00ADse\u0301 en par\u00ADte\u00ADna\u00ADriat avec la ville de Ganges. O\u00F9 chaque jour, un rdv mys\u00ADt\u00E8re est don\u00ADne\u0301 dans un des lieux cultu\u00ADrels de la ville.\u003C/p\u003E",
+            "title": "Monotype et Pigments vivants"
           },
           "fr": {
             "locations": [],
             "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
             "schemaName": "unit",
-            "short": "Une centaines d\u0027oeuvres s\u00E9lectionn\u00E9es par une quinzaine d\u0027artistes",
+            "short": "Des ateliers propos\u00E9s dans le cadre du Calendrier de l\u0027avent de ce d\u00E9c. 2025",
             "tags": [
-              "accueil",
-              "programmation"
+              "atelier",
+              "programmation",
+              "accueil"
             ],
             "temporal": [
               {
                 "date": null,
-                "datetime": "2025-12-17T17:00:00Z",
+                "datetime": "2025-12-19T13:00:00Z",
                 "description": null
               }
             ],
-            "text": "\u003Cp\u003EEx\u00ADpo\u00ADsi\u00ADtion annuelle de vente de mul\u00ADtiples, des\u00ADsins, \u00E9di\u00ADtions \u00E0 \u00C9CHOTONE. Un floril\u00E8ge de propositions artistiques vendues sans commission.\u003Cbr\u003EOU\u00ADVER\u00ADTURES de 11h \u00E0 17h les sa\u00ADme\u00ADdis et de 14h \u00E0 17h les vendredis (hors vacances scolaires).\u003Cbr\u003EEt 7j/7 sur rdv\u003C/p\u003E\u003Cp\u003EAvec les \u0153uvres de \u003Cstrong\u003EFrank\u00ADlin Bault, Phi\u00ADlippe Brie\u0300re\u003C/strong\u003E, la jeune mai\u00ADson d\u2019e\u0301\u00ADdi\u00ADtion ni\u0302\u00ADmoise, \u003Cstrong\u003EBook of me \u003C/strong\u003Eavec \u003Cstrong\u003EAnai\u0308s Ro\u00ADber\u00ADtou, Else Be\u00ADdoux\u003C/strong\u003E, \u003Cstrong\u003EDo\u00ADro\u00ADta Bucz\u00ADkows\u00ADka\u003C/strong\u003E, \u003Cstrong\u003ECe\u0301\u00ADline Cour\u00ADtault Ca\u00ADpe\u00ADlier\u003C/strong\u003E, \u003Cstrong\u003ERodolphe Huguet\u003C/strong\u003E, le N.U collectif avec les pi\u00E8ces de \u003Cstrong\u003EYasmine Blum\u003C/strong\u003E, \u003Cstrong\u003EBololipsum\u003C/strong\u003E, \u003Cstrong\u003EAxelle Carruzzo\u003C/strong\u003E, \u003Cstrong\u003EAur\u00E9lie Piau\u003C/strong\u003E, \u003Cstrong\u003EBertrand Wolff\u003C/strong\u003E et \u003Cstrong\u003EAnton Sk\u00EDa\u003C/strong\u003E, \u003Cstrong\u003EGwen\u00ADdo\u00ADline Sa\u00ADmi\u00ADdoust\u003C/strong\u003E, \u003Cstrong\u003EAgne\u0300s For\u00ADnells\u003C/strong\u003E, , le col\u00ADlec\u00ADtif SOMMES avec \u003Cstrong\u003EJean-Marc De\u00ADmay \u003C/strong\u003Eet \u003Cstrong\u003EVe\u0301\u00ADro\u00ADnique Tuillier\u003C/strong\u003E.\u003C/p\u003E",
-            "title": "\u00C9CHOMARKET, exposition"
+            "text": "\u003Cp\u003EVendredi 19 d\u00E9\u00ADcembre : de 14h a\u0300 17h, deux ac\u00ADti\u00ADvi\u00ADte\u0301s offertes \u00E0 toutes et tous.\u003Cbr\u003EVenez exp\u00E9rimenter la \u003Cstrong\u003Etech\u00ADnique du mo\u00ADno\u00ADtype\u003C/strong\u003E ou d\u00E9couvrir les \u003Cstrong\u003Echangements de couleurs chez les pigments organiques\u003C/strong\u003E \u00E0 \u00C9CHOTONE. \u003Cbr\u003ECet e\u0301\u00ADve\u0301\u00ADne\u00ADment sur\u00ADprise est pro\u00ADpo\u00ADse\u0301 dans le cadre du ca\u00ADlen\u00ADdrier de l\u2019avent or\u00ADga\u00ADni\u00ADse\u0301 en par\u00ADte\u00ADna\u00ADriat avec la ville de Ganges. O\u00F9 chaque jour, un rdv mys\u00ADt\u00E8re est don\u00ADne\u0301 dans un des lieux cultu\u00ADrels de la ville.\u003C/p\u003E",
+            "title": "Monotype et Pigments vivants"
           }
         }
       },
-      "editToken": "eyJhIjoiZWNob3RvbmUiLCJzIjoicGFnZSIsImkiOiJlMzBhMjc0OC0zMTE2LTQ2MDQtODMxNS0xODM3YTliYjJjZDYiLCJ1IjoiaHR0cHM6Ly9sYWFiLmRkbnMubmV0OjM4MDgwLyJ9",
-      "id": "e30a2748-3116-4604-8315-1837a9bb2cd6",
+      "editToken": "eyJhIjoiZWNob3RvbmUiLCJzIjoicGFnZSIsImkiOiJjZmNiNmZkYi0yMjY2LTRjYjEtODBmOC0zZmMyNzk4OTQ1ZDEiLCJ1IjoiaHR0cHM6Ly9sYWFiLmRkbnMubmV0OjM4MDgwLyJ9",
+      "id": "cfcb6fdb-2266-4cb1-80f8-3fc2798945d1",
       "isDeleted": false,
-      "lastModified": "2025-11-25T00:26:54Z",
-      "lastModifiedBy": "subject:6798dad0167d31fb8ec7cc74",
+      "lastModified": "2025-12-18T19:43:39Z",
+      "lastModifiedBy": "subject:6798df7c5b784ee7b7cb52e1",
       "schemaDisplayName": "Page",
       "schemaId": "d0379b0e-294e-4df6-9b2b-257b807b1467",
       "schemaName": "page",
       "status": "Published",
       "statusColor": "#4bb958",
-      "version": 4
+      "version": 2
     },
     {
       "_links": {
@@ -459,106 +799,6 @@
       "status": "Published",
       "statusColor": "#4bb958",
       "version": 6
-    },
-    {
-      "_links": {
-        "delete": {
-          "href": "/api/content/echotone/page/66d1af60-0e5b-4cc7-9c2e-fe965f31d278",
-          "method": "DELETE"
-        },
-        "draft/create": {
-          "href": "/api/content/echotone/page/66d1af60-0e5b-4cc7-9c2e-fe965f31d278/draft",
-          "method": "POST"
-        },
-        "previous": {
-          "href": "/api/content/echotone/page/66d1af60-0e5b-4cc7-9c2e-fe965f31d278/6",
-          "method": "GET"
-        },
-        "self": {
-          "href": "/api/content/echotone/page/66d1af60-0e5b-4cc7-9c2e-fe965f31d278",
-          "method": "GET"
-        }
-      },
-      "created": "2025-09-15T08:05:49Z",
-      "createdBy": "subject:6798df7c5b784ee7b7cb52e1",
-      "data": {
-        "id": {
-          "iv": "photographie-argentique-et-experimentale"
-        },
-        "medias": {
-          "iv": [
-            {
-              "caption": null,
-              "in": true,
-              "inslides": null,
-              "medias": [
-                "73fc0c81-2ff7-4632-a318-c630c668c35c",
-                "56df5e08-f891-4d1a-8f82-6f27f63dc65d",
-                "1200e7a2-202e-4ce1-aa3b-33d9dba8c6e0",
-                "c94774e6-9128-41fe-af07-0388efc188b6",
-                "0181af71-7215-4e69-b312-6de2ca65aa69",
-                "4aa23196-de85-44ab-a1a2-3006dc3fba23",
-                "3736fa0c-548a-4580-9356-bb5c30384c4a",
-                "7582659c-1415-4739-a76f-2c1972b59da7",
-                "d722b622-c5df-40a5-9e10-85fb9a4ed389",
-                "6738e981-6494-487d-9006-00c2775bcc6b",
-                "a258b1f5-48b8-43e7-bb05-bae337a30697"
-              ],
-              "schemaId": "1f4e3697-52bc-45d9-a7a8-65862c13ce4b",
-              "schemaName": "carousel"
-            }
-          ]
-        },
-        "unit": {
-          "en": {
-            "locations": [],
-            "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
-            "schemaName": "unit",
-            "short": "Atelier Mensuel de 3h, les mardis ou mercredis",
-            "tags": [
-              "atelier"
-            ],
-            "temporal": [
-              {
-                "date": null,
-                "datetime": null,
-                "description": "Le mardi ou le mercredi, une fois par mois"
-              }
-            ],
-            "text": "\u003Cp\u003E\u003Cstrong\u003E1 fois par mois\u003C/strong\u003E, cet atelier est men\u00E9 par l\u0027artiste C\u00E9line Courtault Capelier.\u003Cbr\u003EL\u0027atelier aborde le \u003Cstrong\u003Ed\u00E9veloppement classique jusqu\u0027aux traitements alternatifs\u003C/strong\u003E et moins polluants (ex. caf\u00E9nole) d\u0027une pellicule argentique, ainsi que la photographie exp\u00E9rimentale sans appareil comme le \u003Cstrong\u003Ephotogramme (ou rayogramme), alt\u00E9ration, coloration, lumen print..\u003C/strong\u003E.\u003Cbr\u003E\u003Cbr\u003ETout public \u00E0 partir de 16 ans\u003Cbr\u003ETarif 15\u20AC les trois heures avec les produits photo-argentique compris, sans les consommables (papiers...)\u003Cbr\u003E\u002B adh\u00E9sion \u00E0 l\u0027association \u00E0 partir de 2\u20AC\u003Cbr\u003E\u003Cbr\u003EProchain atelier : \u003Cstrong\u003Emardi 9 d\u00E9cembre 2025, \u003C/strong\u003E\u003Cbr\u003EJauge minimale de 6 personnes, maximale de 8 personnes.\u003Cbr\u003EContactez-nous !\u003C/p\u003E",
-            "title": "Photographie argentique et exp\u00E9rimentale"
-          },
-          "fr": {
-            "locations": [],
-            "schemaId": "2bd4ee39-8e6e-4128-9f08-a049cce49f23",
-            "schemaName": "unit",
-            "short": "Atelier Mensuel de 3h, les mardis ou mercredis",
-            "tags": [
-              "atelier"
-            ],
-            "temporal": [
-              {
-                "date": null,
-                "datetime": null,
-                "description": "Le mardi ou le mercredi, une fois par mois"
-              }
-            ],
-            "text": "\u003Cp\u003E\u003Cstrong\u003E1 fois par mois\u003C/strong\u003E, cet atelier est men\u00E9 par l\u0027artiste C\u00E9line Courtault Capelier.\u003Cbr\u003EL\u0027atelier aborde le \u003Cstrong\u003Ed\u00E9veloppement classique jusqu\u0027aux traitements alternatifs\u003C/strong\u003E et moins polluants (ex. caf\u00E9nole) d\u0027une pellicule argentique, ainsi que la photographie exp\u00E9rimentale sans appareil comme le \u003Cstrong\u003Ephotogramme (ou rayogramme), alt\u00E9ration, coloration, lumen print..\u003C/strong\u003E.\u003Cbr\u003E\u003Cbr\u003ETout public \u00E0 partir de 16 ans\u003Cbr\u003ETarif 15\u20AC les trois heures avec les produits photo-argentique compris, sans les consommables (papiers...)\u003Cbr\u003E\u002B adh\u00E9sion \u00E0 l\u0027association \u00E0 partir de 2\u20AC\u003Cbr\u003E\u003Cbr\u003EProchain atelier : \u003Cstrong\u003Emardi 9 d\u00E9cembre 2025, \u003C/strong\u003E\u003Cbr\u003EJauge minimale de 6 personnes, maximale de 8 personnes.\u003Cbr\u003EContactez-nous !\u003C/p\u003E",
-            "title": "Photographie argentique et exp\u00E9rimentale"
-          }
-        }
-      },
-      "editToken": "eyJhIjoiZWNob3RvbmUiLCJzIjoicGFnZSIsImkiOiI2NmQxYWY2MC0wZTViLTRjYzctOWMyZS1mZTk2NWYzMWQyNzgiLCJ1IjoiaHR0cHM6Ly9sYWFiLmRkbnMubmV0OjM4MDgwLyJ9",
-      "id": "66d1af60-0e5b-4cc7-9c2e-fe965f31d278",
-      "isDeleted": false,
-      "lastModified": "2025-11-13T11:01:26Z",
-      "lastModifiedBy": "subject:6798df7c5b784ee7b7cb52e1",
-      "schemaDisplayName": "Page",
-      "schemaId": "d0379b0e-294e-4df6-9b2b-257b807b1467",
-      "schemaName": "page",
-      "status": "Published",
-      "statusColor": "#4bb958",
-      "version": 7
     },
     {
       "_links": {
@@ -2544,5 +2784,5 @@
       "status": "Published"
     }
   ],
-  "total": 24
+  "total": 26
 }

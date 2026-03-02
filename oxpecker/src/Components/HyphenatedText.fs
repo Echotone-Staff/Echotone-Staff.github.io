@@ -5,7 +5,7 @@ open Fable.Core
 
 [<Erase; Import("HyphenatedText", "../Components/HyphenatedText")>]
 type HyphenatedText() =
-    inherit RegularNode()
+    interface RegularNode
 
 [<AutoOpen>]
 module HyphenatedText =

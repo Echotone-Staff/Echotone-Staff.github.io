@@ -68,11 +68,11 @@ module Header =
             // setHasClicked true
             )
                 .classList(
-                // createObj [
-                //     classes.itemActive ==> true
-                //     classes.itemInactive ==> true
-                //     "animate-flicker" ==> false
-                // ]
+                    createObj [
+                    // classes.itemActive ==> true
+                    // classes.itemInactive ==> true
+                    // "animate-flicker" ==> false
+                    ]
                 ) {
                 title
             }
