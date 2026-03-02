@@ -13,7 +13,7 @@
     "@solidjs/router": "^0.15.3",
     "hyphen": "^1.10.6",
     "solid-js": "^1.9.5",
-    "swiper": "^11.2.6"
+    "swiper": "^11.2.10"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.17",
